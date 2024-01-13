@@ -1,0 +1,4 @@
+/* In your CSS file */
+.card-animation {
+    transition: transform 0.5s ease;
+}

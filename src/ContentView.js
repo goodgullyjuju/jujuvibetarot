@@ -1,12 +1,14 @@
 import React from 'react';
+import OneCardDealView from './OneCardDealView';
 
 function ContentView() {
     return (
         <div>
             <h1>Welcome to JujuVibeTarot</h1>
-            {/* Add your component's structure here */}
+            <OneCardDealView />
         </div>
     );
 }
 
 export default ContentView;
+
