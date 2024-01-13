@@ -8,6 +8,7 @@ function OneCardDealView() {
     const [showCard, setShowCard] = useState(false);
     const [redrawCounter, setRedrawCounter] = useState(0);
     const [showingSaveAlert, setShowingSaveAlert] = useState(false);
+<CardView card={drawnCard} showCard={showCard} setShowCard={setShowCard} redrawCounter={redrawCounter} />
 
     useEffect(() => {
         fetch('/TarotCards.json')
