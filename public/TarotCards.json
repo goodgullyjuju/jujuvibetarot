@@ -1,0 +1,470 @@
+[
+    {
+        "id": 0,
+        "name": "The Fool",
+        "imageName": "Fool",
+        "interpretations": "The Fool is as carefree as a person can be. The Fool lacks experience in everything. This is the beginning of the tarot story, and every possibility lies before The Fool: good and bad. Don't worry. Just do the thing. Try it. Don't look before you leap. Just go. Everything that follows will be experience, and you will build as you go. You've got this. Now take the next step."
+    },
+    {
+        "id": 1,
+        "name": "The Magician",
+        "imageName": "Magician",
+        "interpretations": "The Magician is able to control every element in the conscious world. He uses wands, cups, swords, and  pentacles to achieve his goal. The Magician is effective at handling challenges and problem solving to get whatever he wants. You have the ability to create, change, control whatever you put your mind to. You have everything you need. You are capable, smart, and physically ready for the challenges you face."
+    },
+    {
+        "id": 2,
+        "name": "The High Priestess",
+        "imageName": "HighPriestess",
+        "interpretations": "The High Priestess holds a partially hidden Torah as she sits atop the crescent moon with her black cat and her white cat. They are surrounded by a veil decorated with pomegranates. You can explore the subconscious realms as far as you're willing to delve. You must trust your intuition about what is happening in your situation. You must deal with problems with a deeper sense of spirituality and psychic control. There could be secrets."
+    },
+    {
+        "id": 3,
+        "name": "The Empress",
+        "imageName": "Empress",
+        "interpretations": "The Empress is the absolute feminine power of fertility, initiative, and passion. She is loved and cherished by nature. She is the expectant mother of all. You can relax and trust your instincts about your surrounding world. Be creative. Dream big, and know the world loves you as its mother. Have fun with this energy. Fertility and creativity are amazingly strong now."
+    },
+    {
+        "id": 4,
+        "name": "The Emperor",
+        "imageName": "Emperor",
+        "interpretations": "The Emperor is the absolute masculine powers of force, control, and domination. He can force his way upon others without remorse. Masculinity, aggression and control fuel your fire. Move forward with your plans. This is a time for dominance. If you feel angry or frustrated, try to channel you Passion creatively, but remain determined."
+    },
+    {
+        "id": 5,
+        "name": "The Hierophant",
+        "imageName": "Hierophant",
+        "interpretations": "The Hierophant is a teacher of the church or religious institution. The Hierophant requires subordination and discipline from his followers. Be aware of someone imposing servitude and captivity upon your free soul. The window dressings of religious institutions can be beautiful, but they are rarely reflective or what is happening behind closed doors.  Mercy, Goodness, Grace and inspiration can be present here. Open your mind and your heart, think for yourself, and be good to others."
+    },
+    {
+        "id": 6,
+        "name": "The Lovers",
+        "imageName": "Lovers",
+        "interpretations": "The Lovers appear before you, lost in each others' eyes with only the Moon to witness their bond. You should be aware of attraction to another, and even love, growing between you. It is enough to overcome trials if you both choose to love. Love is a choice, not a chance."
+    },
+    {
+        "id": 7,
+        "name": "The Chariot",
+        "imageName": "Chariot",
+        "interpretations": "When the Chariot appears, you can make your way forward with ease. The Chariot is raw power to push through obstacles and issues. You will make progress. Do not back down. Keep moving forward. You have graduated from walking. Now you can achieve your goals faster and with really cool cats. Do the thing. Seek triumph."
+    },
+    {
+        "id": 8,
+        "name": "Strength",
+        "imageName": "Strength",
+        "interpretations": "There is a secret to Strength. Here's a hint: It's about Love. Love is the ultimate Strength. You are filled with Power and Energy. You are capable of so much more now. Love is an Amazing Force of Nature. Be courageous. Be magnanimous. Be Strong. Go Forth and Love!"
+    },
+    {
+        "id": 9,
+        "name": "The Hermit",
+        "imageName": "Hermit",
+        "interpretations": "The Hermit lives alone in quiet solitude. He needs nothing. The earth supplies his every need. He is simplicity. He is the antithesis to conformity and corruption of socialized behavior. You should take some time to yourself. Stay away from crowded or unnecessary social situations. Allow yourself some rogue time. Decompress from all the external pressures and seek answers from within."
+    },
+    {
+        "id": 10,
+        "name": "Wheel of Fortune",
+        "imageName": "WheelofFortune",
+        "interpretations": "The Wheel of Fortune appears whenever you are about to experience a change in your luck for the better. While you may not win the lottery, you can't win if you don't play. Luck and Felicity are on your side when the Wheel of Fortune is in your hand. Let go of negativity, and try new things. Who knows, you may find a whole new life. Destiny awaits."
+    },
+    {
+        "id": 11,
+        "name": "Justice",
+        "imageName": "Justice",
+        "interpretations": "Justice sees with the eyes of the simple Hermit in touch with all of the inner truths of the world. Justice also has Divine Power of righteousness. This is a time for following the laws of nature, integrity, and love. What has been stolen from you will be dealt with along with any other transgressions ... including your own. Be fair in all things. Above all, act with respect and love towards others."
+    },
+    {
+        "id": 12,
+        "name": "The Hanged Man",
+        "imageName": "HangedMan",
+        "interpretations": "The Hanged Man has been given a new perspective on life. He may not be enjoying the situation, but his new perspective will prove absolutely necessary for all that will follow in his life. You may be given the circumstance and opportunity for a new perspective. Instead of reacting negatively, accept the challenge. Your new perspective may make the rest of your life completely different ... In a good way."
+    },
+    {
+        "id": 13,
+        "name": "Death",
+        "imageName": "Death",
+        "interpretations": "Death is a Force of Change. Death rides on a dark horse, and ends situations, addictions, false beliefs, and other things that need to change. While this does not imply that someone will die, It does imply that some way of life does need to change, or end all together. There is a destructive energy in play. Try to cooperate with it. Fighting this energy will be useless."
+    },
+    {
+        "id": 14,
+        "name": "Temperance",
+        "imageName": "Temperance",
+        "interpretations": "A beautiful angel holds chalices of light and water. Temperance requires us to reconcile the unreconcilable. Somehow we have to find the synergy and the balance in life. Pay attention to the imbalances of your life. Moderate your behavior and your emotions. Try to create synergy between the opposites that seem to create conflict. When life seems chaotic, try to find the sweet spot to exist between the extremes. Temper passion with common sense and create a beautiful life."
+    },
+    {
+        "id": 15,
+        "name": "The Devil",
+        "imageName": "Devil",
+        "interpretations": "The Devil holds his victims hostage with their addictions. He is no distinguisher between the man or the woman. He is a puppeteer, a boss, a jerk. Everyone is free to leave him, but they must leave their addictions as well. The Devil is menacing, controlling, painful energy. Let go of addictions in your life. Work to be free of anyone's menacing control. Put down the heavy chains, and walk away. There is so much more to this life. Ask for help. Accept help."
+    },
+    {
+        "id": 16,
+        "name": "The Tower",
+        "imageName": "Tower",
+        "interpretations": "The Tower is hit by lightning and explodes into pieces upon the surrounding ground. Nothing is left of this structure. The Tower suffers complete annihilation. Something you have built in your life is about to be completely destroyed. You will definitely survive. Those you love will survive. But all structures, relationships and beliefs are subject to sudden explosive change. Seek cover. Clean up later."
+    },
+    {
+        "id": 17,
+        "name": "The Star",
+        "imageName": "Star",
+        "interpretations": "The Star depicts a young person completely focused on a beautiful star reflected in a pool of water. Naiveté and hope are obvious and can lead to a positive outlook or disappointment. While it is always wonderful to find beauty in the world, the message here is about gullibility and focus. While it is healthy to hope for the best, it is also healthy to be prepared and protected not leaving yourself vulnerable to manipulation or disappointment."
+    },
+    {
+        "id": 18,
+        "name": "The Moon",
+        "imageName": "Moon",
+        "interpretations": "The Moon shines out through the darkness upon the wild wolf and the domesticated dog. It is up to you to make your decision while no one can see you in the dark. Will you choose the path of the wild wolf: free, ruthless, and selfish? Will you choose the path of the domesticated dog: loyal, obedient, and selfless? Be aware of the energies pulling you to walk on the wild side. Are you making safe decisions? Be aware of the energies pushing you to walk in obedience. Are you living your life to the fullest?"
+    },
+    {
+        "id": 19,
+        "name": "The Sun",
+        "imageName": "Sun",
+        "interpretations": "The Sun is positive energy no matter what. The energy of The Sun fills you with an innocent and youthful burst. You feel like you are meant to be at this place, in this time, for this very moment. You are happy and calm. The Sun speaks to your identity and to your very soul.  The warmth, the surge, the advantage you need is with you. It is in you. It is all around you. Enjoy!"
+    },
+    {
+        "id": 20,
+        "name": "The Final Judgement",
+        "imageName": "LastJudgement",
+        "interpretations": "The Final Judgement depicts the Archangel Gabriel playing his trumpet calling all souls from their graves.  The souls are judged by the Angel of the Lord. The Final Judgement requires belief in Jesus, the Son of God. You are being called to consider your life as you have lived it up until now. Do you connect with a Higher Good? Do you believe in God? What are your plans for the afterlife? It is never a bad time to consider a good seat for eternity."
+    },
+    {
+        "id": 21,
+        "name": "The World",
+        "imageName": "World",
+        "interpretations": "The World is the most comprehensive card in the Tarot. The World is completion of maturity and sophistication. The World is so much bigger than we give it credit for. There are so many people in the world: so many needs, so many ideas, so many solutions. You are on track. You have accomplished great things, great understanding, great maturity, great empathy. Keep your mind open. The World is so much more."
+    },
+    {
+        "id": 22,
+        "name": "Ace of Wands",
+        "imageName": "AceofWands",
+        "interpretations": "Lightning strikes a tree bending it, curling its wood, cauterizing the wounds as it strengthens the wood into something more worthy of a wand. Wands are more than wood. they carry intention. They focus that energy into power and passion. You are at the beginning of something amazing. Your passion will lead you to create something beautiful and special. Focus your energy into this new venture. It will surely pay off."
+    },
+    {
+        "id": 23,
+        "name": "King of Wands",
+        "imageName": "KingofWands",
+        "interpretations": "Wands are the suit of fire and passion, and the King of Wands does not disappoint The King dominates his exterior world with passion, inspiration, and generosity. You should be conscious of your passions. Let them inspire you like kindling to your fire and lead you to create a life that you truly love. Be generous. Be passionate and feel the energy of a fiery lion breathing life into your plans."
+    },
+    {
+        "id": 24,
+        "name": "Queen of Wands",
+        "imageName": "QueenofWands",
+        "interpretations": "The Queen of Wands keeps her fires of passion and creativity under control within her realm. She is a fierce advocate with an endless stream of new ideas and plans. She creates a world that is beautiful and inspiring, but is selective about whom she shares it with. Embrace your fire. Break out of the doldrums and create something beautiful in your life. Explore your passions. Most importantly, encourage and inspire those you love to do the same."
+    },
+    {
+        "id": 25,
+        "name": "Knight of Wands",
+        "imageName": "KnightofWands",
+        "interpretations": "The Knight of Wands is the ultimate action hero. All energy around and about this figure is in motion. There is no time to think; no time to wait; no time better to strike than right this very instant. Passion, urgency, motivation is primed, and the Knight of Wands is a force to be reckoned with. Do The Thing! Start turning the dream into reality. Take the first steps right now to secure yourself. Fight for what you want."
+    },
+    {
+        "id": 26,
+        "name": "Page of Wands",
+        "imageName": "PageofWands",
+        "interpretations": "The Page of Wands is just beginning to engage some new quest. Fearless and full of exciting new ideas, the Page of Wands may attain their goals, or maybe not, but they will never run out of creative ways to achieve their mission. Adventure, exploration, and excitement are key. You may be at the beginning of a project. Embrace the creativity. Explore all of the possibilities. Even If you fail at first, try different ways to approach your task. It's not about the product. Focus on the fun."
+    },
+    {
+        "id": 27,
+        "name": "10 of Wands",
+        "imageName": "10Wands",
+        "interpretations": "The 10 of Wands depicts a person that has gathered up wands, now having to carry them around. They are heavy and awkward. If each wand is an idea that has not been used to build something, then they are useless. Inspirations are meant to be played with. Try this. Try that. You may fail several times, but eventually, you will create something amazing. Do not carry ideas around. They get heavy. Take the time to realize your ideas and dreams. You might just find yourself happy and free."
+    },
+    {
+        "id": 28,
+        "name": "9 of Wands",
+        "imageName": "9Wands",
+        "interpretations": "The 9 of Wands depicts a soldier standing exhausted holding their weapon with a line of armed soldiers behind them. They must continue the fight. The battle is almost won. This is a card of Strength. You have tried to create something a thousand ways, but it's just not right... yet. You have fought to protect your loved ones for months, but you still have no security or peace. Do not give up. Keep trying. Keep fighting. Victory is near!"
+    },
+    {
+        "id": 29,
+        "name": "8 of Wands",
+        "imageName": "8Wands",
+        "interpretations": "The 8 of Wands depicts arrows flying through the air in one direction. The battle has begun. The energy is focused. Everything is happening now. You may not see the results yet. You may have just started, or you may have been working, creating, fighting for a while now, but the energy is in motion.Keep up the good work. Your time and energy are not wasted."
+    },
+    {
+        "id": 30,
+        "name": "7 of Wands",
+        "imageName": "7Wands",
+        "interpretations": "The 7 of Wands depicts a conductor holding up a baton before an entire orchestra. This person has spent countless hours mastering his craft of music. He is now using his wand to lead all of the other musicians fighting their battles to master their music as well. This is the card of The Teacher. Use your experience and wisdom to teach others you see fighting the battles you have already mastered. Teachers are incredibly important."
+    },
+    {
+        "id": 31,
+        "name": "6 of Wands",
+        "imageName": "6Wands",
+        "interpretations": "The 6 of Wands depicts a soldier wearing a laurel returning from battle carrying a crown of laurel upon a staff. There is a procession of others celebrating the victory. Hurray! The battle is won. Celebrate the small victories along the way. This is not a King winning the war. But who cares. Celebrate your progress. Acknowledge your victories."
+    },
+    {
+        "id": 32,
+        "name": "5 of Wands",
+        "imageName": "5Wands",
+        "interpretations": "There is a chaotic conflict here. The fight seems around them and within their ranks. Arguing, competing, sabotaging, and disarray. Very little progress seems to be happening, but their enemies are not external. Their problems are the chaos and their lack of unity. Be aware of people you trust working against you. Be aware of the self-sabotage that comes from lack of focus. Pull yourself or selves together and work as one with intention and determination. And for Goodness' sake, stop shooting lightning at your own team."
+    },
+    {
+        "id": 33,
+        "name": "4 of Wands",
+        "imageName": "4Wands",
+        "interpretations": "The 4 of Wands is a foundational energy. There are 4 directions on a map and 4 wands at  the beginning of this union. With the castle behind them, only happy thoughts and hopes of a beautiful celebration of life sing out. Be ready for a beautiful celebration in your life. This energy is about family, friends and love. Good things are definitely in store for you. Look for the Good. Celebrate Love. Celebrate Friendship. Be Thankful, and be Happy."
+    },
+    {
+        "id": 34,
+        "name": "3 of Wands",
+        "imageName": "3Wands",
+        "interpretations": "The 3 of Wands depicts a person watching as his ships return filled with the cargo of his successes and treasures. He has lived a productive life. He has put many things in motion out to sea. Now he is realizing his fortune. Have faith that all of your hard work will pay off. Believe that you will realize all that you hope to achieve. You will succeed in everything you are working for and fighting so hard for now. You will see your ships come in."
+    },
+    {
+        "id": 35,
+        "name": "2 of Wands",
+        "imageName": "2Wands",
+        "interpretations": "The 2 of Wands depicts a person holding a globe while looking out into the world. They can see everything they need to create the life they want. They can see everything in the world, and everything in their environment. They are making their plans with everything happening in their mind. This is the time for you to contemplate and develop your plans. You can see everything in your mind's eye that you need to consider to be successful. Dream the dream, and be sure to Plan Big."
+    },
+    {
+        "id": 36,
+        "name": "Ace of Cups",
+        "imageName": "AceofCups",
+        "interpretations": "Water bubbles up over the top of the chalice fountain pouring down the sides into a pool that flows out and beyond the garden. Life itself is completely dependent upon the pure water from this Ace of Cups. You are at the beginning of positive emotional bonds and communication. Your heart is spilling over into your mind, and you can easily share your feelings and intentions with others through creativity and communication. You are received and understood, and your relationships will blossom."
+    },
+    {
+        "id": 37,
+        "name": "King of Cups",
+        "imageName": "KingofCups",
+        "interpretations": "Cups are the suit of emotions, creativity, and communication. The King of Cups dominates his external world standing under the full moon and stars. He dominates from the depths of the ocean up to the ships and the cosmos the same way he commands emotional balance throughout his kingdom. He is connected through the very drops of water in the atmosphere to the deepest ocean currents. No matter what you are facing in life, you can handle it with emotional balance. You can face the depths of darkness with the same determination and confidence you summon in sunlight above the clouds. You will not be shaken. You are even-tempered and empathetic."
+    },
+    {
+        "id": 38,
+        "name": "Queen of Cups",
+        "imageName": "QueenofCups",
+        "interpretations": "The Queen of Cups walks the beach at night filling golden cups with the light and energy of the full moon. Ocean spray curls her wild hair, and the moon shines on her pearls, coral, and seashells. She feels the truth and knows it before you tell her. She uncovers secrets like sand blown from her delicate hands. She understands, and she encourages you to focus on your intuition. Be honest with yourself. Listen to that little voice in your heart, and trust yourself. Understanding yourself on an emotional level will make you more in tune with the emotional needs of those you love."
+    },
+    {
+        "id": 39,
+        "name": "Knight of Cups",
+        "imageName": "KnightofCups",
+        "interpretations": "The Knight of Cups is emotional balance in motion. She and her horse are one fighting the power of the turbulent waves crashing on the shore and the tremendous pull of the currents below. She carries the same waters in her cup. She is mastering them. The Knight of Cups matches the level of energy around her, reduces it to peace within her, and then progresses toward her destiny.  Find the Beauty. Find the Peace. Find the Truth. Everything will fall into place as you process your world with intentional, active emotional balance."
+    },
+    {
+        "id": 40,
+        "name": "Page of Cups",
+        "imageName": "PageofCups",
+        "interpretations": "The Page of Cups stands at the edge of the sea considering a fish within his hands. He is just beginning to figure out this little emotional enigma. Each tiny piece of cosmic revelation is a priceless gift. The Page of Cups has a new insight into his own emotions. This will give him new insights into why others feel and behave the way they do. Take time to look inside. Often what bothers you about other people resembles what bothers you about you. Fish by fish, you will grow."
+    },
+    {
+        "id": 41,
+        "name": "10 of Cups",
+        "imageName": "10Cups",
+        "interpretations": "The 10 of Cups depicts a family in front of their home under a rainbow of promise. This is the ultimate happy family card. Everyone feels support, approval, and acceptance. There is balance, stability, and love. You are creating a life, a family, a world wherein everyone feels balanced, happy, and loved. Trust that you are on the right track of complete happiness for you and your family."
+    },
+    {
+        "id": 42,
+        "name": "9 of Cups",
+        "imageName": "9Cups",
+        "interpretations": "The 9 of Cups is one of the most positive cards in the tarot. This is the gift card. Your wonderful host is smiling at you at a table set for you with lots of delectable foods and drinks. Not only are you invited, you are celebrated! Maybe you are the host, and maybe you are the guest. Regardless, there is more than enough food and drinks for everyone. This is success and abundance. It is safe to feel content and relax. Look around. Appreciate the moment, and go forward celebrating your loved ones whenever you get the chance."
+    },
+    {
+        "id": 43,
+        "name": "8 of Cups",
+        "imageName": "8Cups",
+        "interpretations": "The 8 of Cups have spilled out. She is walking away from the mess toward an unknown life. There is nothing left to stay for. It is time to walk away. You have done all that you can. You have tried to fill everyones' cups and their hearts, but it is of no use. There is nothing left to stay for here. You will never be happy here. A new life in a new direction is just what you need. You do not even need a plan at this point. Just step into the unknown knowing only that it is a new life."
+    },
+    {
+        "id": 44,
+        "name": "7 of Cups",
+        "imageName": "7Cups",
+        "interpretations": "The 7 of Cups depicts 7 choices to choose from. There are coins for wealth, a castle for home and family, a cat for connection to animals, a snake for magic, grapevines for farm life, books for knowledge and intellect, and fire for imagination and creativity. There are many choices to make in life about what you want. It is a good Idea to know what you want. Create the life you want by choosing the right elements along the way. Your happiness is manifested in making good choices."
+    },
+    {
+        "id": 45,
+        "name": "6 of Cups",
+        "imageName": "6Cups",
+        "interpretations": "The 6 of Cups depicts siblings reminiscing about the past. There is a sacred remembering when it is done amongst siblings about their childhood. There is a secret language in the nostalgia that no one else speaks. Take time to remember your childhood. Use the experiences and relationships you remember to help you process your world now. Try not to change the innocent naïveté with reasoning you now have. Keep it simple. Move forward a little less jaded and a little more connected to your innocent past."
+    },
+    {
+        "id": 46,
+        "name": "5 of Cups",
+        "imageName": "5Cups",
+        "interpretations": "The farmer is sad and frustrated about the three cracked and spilled jugs of milk, but glad he still has two full jugs. He walks away focused on what is left. It is time to leave your empty vessels behind and focus on the two full vessels in your hands. The past is over and done. Maybe you have regrets. Maybe you could have handled things differently. It does not matter. It is time to let go of what is done, and move forward focused on the possibilities in your life that remain."
+    },
+    {
+        "id": 47,
+        "name": "4 of Cups",
+        "imageName": "4Cups",
+        "interpretations": "A man has been served four tasty looking drinks, but he is not happy. He does not want any of the drinks. They simply do not appeal to him. He would rather not drink anything at all. You have choices in front of you, but you do not want any of them. You would rather not. Choosing nothing is also a choice and it is your choice to make. Trust your gut. Don't do anything you don't want to do. Be strong. You are not wrong."
+    },
+    {
+        "id": 48,
+        "name": "3 of Cups",
+        "imageName": "3Cups",
+        "interpretations": "Three women laugh together toasting their drinks and celebrating each other. They are friends. There is a bond here that makes them even happier than if they were celebrating alone. That bond - that giddiness - is the energy of the 3 of Cups. Now is a time to celebrate with your friends. They will be happy for you, and may even have good news of their own. This bond between you, though, is the main focus. Be sure to acknowledge and celebrate your bond. If you do not have friends, now is a good time to open up and make a start. It's okay to trust."
+    },
+    {
+        "id": 49,
+        "name": "2 of Cups",
+        "imageName": "2Cups",
+        "interpretations": "The two of cups depicts partners or even lovers working together, loving each other, and genuinely enjoying each other's company. Whatever you are going through, it will be better with a partner. It is time to celebrate your partnerships. Make sure your partners know you appreciate them... even maybe love them. If you do not have a partner, it is okay to think about it, and plan it, and pursue it. Life is richer when you have someone to share it with."
+    },
+    {
+        "id": 50,
+        "name": "Ace of Swords",
+        "imageName": "AceofSwords",
+        "interpretations": "Lightning strikes through night sky like a solid beam of blue light over the massive double edged sword. One edge of the sword is intellect and knowledge. the other edge of the sword is violence and destruction. The lightning sharpens both edges of the Ace of Swords making it all the more powerful and dangerous. You are in a powerful position wielding knowledge and the violence that goes with that superior Intellect unchecked by emotion or empathy. You will definitely emerge victorious. Try as best you can to do no harm."
+    },
+    {
+        "id": 51,
+        "name": "King of Swords",
+        "imageName": "KingofSwords",
+        "interpretations": "The King of Swords is in complete control of his world. He is the smartest man in the room. He is the wisest of all kings. He is a king without emotion, and he can be a nightmare to his enemies. His swords are double edged with intelligence and violence. Do not mistake his calm for weakness. You are being called to control your temper and emotions, and rely on your intellect and logic to control a situation. Advise others wisely and maintain order in your realm. This is not a time for theatrics. This is a time for logic and wit. Outsmart the foxes."
+    },
+    {
+        "id": 52,
+        "name": "Queen of Swords",
+        "imageName": "QueenofSwords",
+        "interpretations": "The Queen of Swords has no use for drama. She is in complete control of her own emotions because she ignores them altogether. She thrives on facts and logic. She is brutal. She loses no sleep over destroying enemies. She is completely objective. You are either being warned about a Queen of Swords headed your way - In which case, you must get your facts straight and do not cry. Or you are being called to behave as the Queen of Swords without emotion and deal with a situation completely objectively. Cry later."
+    },
+    {
+        "id": 53,
+        "name": "Knight of Swords",
+        "imageName": "KnightofSwords",
+        "interpretations": "The Knight of Swords is brutally direct, completely focused, and obsessed with accomplishing the mission. They are smarter than any other knights, and will destroy anyone or anything that gets in their way. They are a shape-shifting terminator. If the Knight of Swords is headed your way, you should find out what they expect from you. Provide it, and get out of their way. If you are being called to act as the Knight of Swords in a situation. Get it done. Take no prisoners. Get out."
+    },
+    {
+        "id": 54,
+        "name": "Page of Swords",
+        "imageName": "PageofSwords",
+        "interpretations": "The Page of Swords is extremely smart and brutally focused on her goals. She is not interested in an engagement ring when there is a chance to join in a good battle. The ego associated with Swords should not be underestimated. You must pay close attention to the details of any project you are starting or action you are beginning to take. This is not a time to consider how anything makes you feel. Focus on working wiser and strive for excellence. Victory is key."
+    },
+    {
+        "id": 55,
+        "name": "10 of Swords",
+        "imageName": "10Swords",
+        "interpretations": "The 10 of Swords is not for the fainthearted. The 10 of Swords depicts someone betrayed and killed with 10 swords sticking out of their back. This is the ultimate failure - utter betrayal. This is your lowest point. It cannot get any worse. It can only get better from here. Leave the failure on the field. Trust no one. Just leave. Start over. Do better. Be wiser."
+    },
+    {
+        "id": 56,
+        "name": "9 of Swords",
+        "imageName": "9Swords",
+        "interpretations": "The 9 of Swords depicts someone suffering from headaches, insomnia, and stress. their mind is so overwhelmed, they cannot relax. Their mind is wounded, and they have no peace. Take time for yourself. Get some much needed rest. Stay away from stressful situations. Stay away from toxic people who gaslight you. Seek help. Reach out to people who can help you. Accept help. Create or find a space wherein you can heal."
+    },
+    {
+        "id": 57,
+        "name": "8 of Swords",
+        "imageName": "8Swords",
+        "interpretations": "The 8 of Swords depicts a woman standing amidst 8 swords sticking out of the ground. It is almost as though she is trapped there, or a prisoner, but all she has to do is take off her blindfold and walk away. She is only trapped by her own indecsion and inaction. Don't allow yourself to become trapped within your own thoughts, or the opinions of others. Walk away. Get out of your head. Get them out of your head. Start over. Start simply. Set a goal for yourself, and go get it."
+    },
+    {
+        "id": 58,
+        "name": "7 of Swords",
+        "imageName": "7Swords",
+        "interpretations": "The 7 of Swords depicts a person stealing 7 swords from an enemy camp. As he is making his getaway, the enemy camp begins to wake and realize they have been robbed. This soldier is very competent, and he has served his own camp well with his strategy, sneakiness, and stealth. Sometimes you have to do sketchy stuff to protect the people you care about. Sometimes wisdom looks a lot like cheating, but all is fair in War. The main goal is to protect your loved ones."
+    },
+    {
+        "id": 59,
+        "name": "6 of Swords",
+        "imageName": "6Swords",
+        "interpretations": "The 6 of Swords depicts a person being rescued on a boat with 6 swords. They have experienced something difficult, but now they are heading to safety. You have been through some difficult situations. Your life is about to get easier. Keep the wisdom of your experiences with you. You will be wiser for all you've been through, travel may be in your immediate future. Don't be afraid. It all gets better from here."
+    },
+    {
+        "id": 60,
+        "name": "5 of Swords",
+        "imageName": "5Swords",
+        "interpretations": "The 5 of Swords depicts a battle wherein one opponent is far more skilled and competent. He is bigger, and he has more weapons. His enemies are running away from him. They have accepted that they cannot win this battle. Humility is an important virtue. Have the wisdom to know when you are outmatched. Have the humility to retreat. Live to fight another day. Choose your battles. Choose life."
+    },
+    {
+        "id": 61,
+        "name": "4 of Swords",
+        "imageName": "4Swords",
+        "interpretations": "A soldier rests with his 4 swords. He is exhausted, and he needs to recuperate physically. Sleep is his best course of action. In sleep, he will be restored. You need to rest. There is no shame in taking time off. There is no shame in sleeping. Your body needs to recuperate.Rest. Rejuvenate.Relax. You cannot afford not to rest. You need to be at your best for what is to come. Rest."
+    },
+    {
+        "id": 62,
+        "name": "3 of Swords",
+        "imageName": "3Swords",
+        "interpretations": "A heart is pierced by 3 swords on a dark and cloudy, rainy day. You are facing painful revelations. The truth can be a very painful thing. You must process the pain and accept the truths. The suffering will bring you clarity. The suffering - like the rain - will end. The clarity will stay with you forever. You will be wiser for this experience. Your heart will heal."
+    },
+    {
+        "id": 63,
+        "name": "2 of Swords",
+        "imageName": "2Swords",
+        "interpretations": "She holds 2 swords in her hands with lightning flashing behind her back. She appears ready to move into the fray except for one thing. She must open her eyes. Her swords are her truths. The lightning is her intuition screaming at her. But her eyes are closed. Something is not right about her truths. You must face the possibility that what you have always believed is not true. Listen to your inner voice screaming at you. Open your eyes."
+    },
+    {
+        "id": 64,
+        "name": "Ace of Pentacles",
+        "imageName": "AceofPentacles",
+        "interpretations": "A golden coin shines suspended mid-air in a lush green garden. Pentacles are coins representing earth, earthly needs and luxuries. This is the beginning of a successful venture. You have everything you need. Plant a forest. Build a homestead. Start a business. Whatever your heart is yearning to put your hands to... Do it. Abundance and Prosperity are within your grasp."
+    },
+    {
+        "id": 65,
+        "name": "King of Pentacles",
+        "imageName": "KingofPentacles",
+        "interpretations": "He sits upon an elaborate golden throne. The King of Pentacles is prosperous and kind. Despite his massive fortune, he is down to earth. He is a grounded soul. The King of Pentacles dominates his external world of riches and nature, but he loves his family the most. Focus your energy into the physical world. Take good care of your family. Be present to your loved ones. Use your wealth and prosperity to provide for those you love."
+    },
+    {
+        "id": 66,
+        "name": "Queen of Pentacles",
+        "imageName": "QueenofPentacles",
+        "interpretations": "She sits upon her golden throne ina garden lush with vivacious green beauty. She is earth mother. The barnyard creatures trust her and follow her. She is generous and kind. While money is no worry for the Queen of Pentacles, she is focused on her family. You are being called to focus on the natural world around you, your family, and your finances. Embrace simplicity and common sense. Snuggle your pets, and spoil your children."
+    },
+    {
+        "id": 67,
+        "name": "Knight of Pentacles",
+        "imageName": "KnightofPentacles",
+        "interpretations": "He charges forward on a black plow horse through a field of grain. He is massive and strong. The Knight of Pentacles is roughly the size of a mountain riding a work horse that could cast a shadow on a wooly mammoth. Money is not his concern. His focus is on strength, consistency, and routine successes. Focus on your routines and everyday tasks. Keep your family healthy, happy and safe. This is not a time for extravagance or exotic whims. This is a time to take care of the basics."
+    },
+    {
+        "id": 68,
+        "name": "Page of Pentacles",
+        "imageName": "PageofPentacles",
+        "interpretations": "She studies the stars of the sky and the stones on the ground. She is just beginning to see the connections of life on earth from plants and animals to planets and stars to bacteria and fungi to humanity. She watches and learns from the natural world. Her earthiness grounds her along the way. You are beginning to understand how sacred the earth, the plants, the animals, and the people are. You are stepping outside of yourself enough to supply their needs. You must feed the world around you. Start somewhere."
+    },
+    {
+        "id": 69,
+        "name": "10 of Pentacles",
+        "imageName": "10Pentacles",
+        "interpretations": "Through the massive golden archway lies a castle with gardens, stables, markets, and schools. Everything a family needs to thrive and grow is here. You have or will soon reach a place where all of your family's earthly needs are met. Here there are no worries about money, food, or and physical needs. Spend time with your family now. Be present to them. Be the present."
+    },
+    {
+        "id": 70,
+        "name": "9 of Pentacles",
+        "imageName": "9Pentacles",
+        "interpretations": "She is elegant and sophisticated. She has raised her family, and now lavishes in beautiful gowns. she goes to elite parties and to all of the the upper class  establishments in the area. She has the security of wealth and all of the freedoms and indepence that can bring. You are or will soon be financially secure. You have reached a place of refinement and respectability. Enjoy your life. You have worked hard to get here. You deserve this. Help others when you can."
+    },
+    {
+        "id": 71,
+        "name": "8 of Pentacles",
+        "imageName": "8Pentacles",
+        "interpretations": "He works meticulously everyday to craft the perfect coins for his customers. His handiwork is precise. He is hyper-focused on the details. He can only sell it if it is perfect. Pay attention to the details of your work, but do not become obsessed. There is a fine line between striving for excellence and demanding perfection from yourself.  The latter is not healthy. Opportunity looks a lot like hard work,but good opportunities can be missed if you never leave the furnace."
+    },
+    {
+        "id": 72,
+        "name": "7 of Pentacles",
+        "imageName": "7Pentacles",
+        "interpretations": "She plants golden coins so that the plants that grow will flower with golden coins, and she will become wealthy. Investment is a process of hard work, sacrifice and faith. Everything you plant and nurture grows and multiplies. Be conscious of what you plant. Plant your light, and see how much your light multiplies throughout your world into Love. There is no greater profit than Love."
+    },
+    {
+        "id": 73,
+        "name": "6 of Pentacles",
+        "imageName": "6Pentacles",
+        "interpretations": "The generous woman shares 6 golden coins with the less fortunate homeless man. While he is extremely thankful and happy, her heart is full of joy. You may receive an unexpected gift of charity. Good things can happen unexpectedly. There does not even have to be a reason. Charity is given, but the blessing goes to the giver. Give others your charity, and receive an even bigger blessing. Be a Giver."
+    },
+    {
+        "id": 74,
+        "name": "5 of Pentacles",
+        "imageName": "5Pentacles",
+        "interpretations": "Disabled, unfortunate people stand outside the elegant, stained glass window of a church. They are not welcomed inside. They stand freezing in the snow and ice. Their only warmth is their bond as outcasts. You are having a hard time. You are struggling with your health, finances, and relationships. You may even be losing faith - in others and in yourself as well. Hang in there. This, too, shall pass. Reach out to others and accept the help they offer."
+    },
+    {
+        "id": 75,
+        "name": "4 of Pentacles",
+        "imageName": "4Pentacles",
+        "interpretations": "This man is all about the money. He is sitting in on a throne of golden coins. He has plenty of coins. It is possible to be too focused on money. Greed is not a positive trait in a person. Get out and see the world. Have some adventures. Meet some new people. Maybe even help some people. Spend your money and your time wisely. And if you are going to save money, put it in a bank, or invest in other people."
+    },
+    {
+        "id": 76,
+        "name": "3 of Pentacles",
+        "imageName": "3Pentacles",
+        "interpretations": "The community leaders have worked together to serve their neighbors, friends, and families. The community has engraved the coins with their faces as an act of respect and gratitude. Working together with others to build up and serve a community benefits everyone involved. Participate in your community. The payoff is not just the good reputation and coins with your face on them. The true payoff is a sleeping well at night because you worked hard helping others."
+    },
+    {
+        "id": 77,
+        "name": "2 of Pentacles",
+        "imageName": "2Pentacles",
+        "interpretations": "The Golden Handcuffs are heavy and restrict the movement of the strained hands. The hands can hold golden coins, but only so many. Focusing only on making more and more money can become an unbearable weight. There is more to your life than gold. You need Balance. You need to take the Golden Handcuffs off. Sell them and the gold coins. Go live a free life. Find Love. Create Happiness."
+    }
+]
