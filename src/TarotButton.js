@@ -1,13 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+// Removed unused imports
+import './TarotButton.css';
 
-import './TarotButton.css'; // Assuming you have a CSS file for styling
-
-function TarotButton({ title, destination }) {
+function TarotButton({ title, onClick }) {
     return (
-        <Link to={destination} className="tarot-button">
+        <button onClick={onClick} className="tarot-button">
             {title}
-        </Link>
+        </button>
     );
 }
 

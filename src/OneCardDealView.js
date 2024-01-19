@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import TarotButton from './TarotButton'; // Assuming you have a TarotButton component
+import TarotButton from './TarotButton';
 import './OneCardDealView.css';
-
+import CardView from './CardView'; 
 function OneCardDealView() {
     const [cards, setCards] = useState([]);
     const [drawnCard, setDrawnCard] = useState(null);
@@ -49,22 +49,7 @@ function OneCardDealView() {
     );
 }
 
-function CardView({ card, showCard, redrawCounter }) {
-    useEffect(() => {
-        setShowCard(true); // Assuming setShowCard is needed here. If not, this effect can be removed
-    }, [redrawCounter, setShowCard]);
 
-    return (
-        <div>
-            <img src={`/images/${card.imageName}`} alt={card.name} className="card-animation" style={{ width: 300, height: 300, transform: `rotateY(${showCard ? '0' : '180'}deg)` }} />
-            <h2>{card.name}</h2>
-            <div style={{ maxHeight: '300px', overflowY: 'auto' }}>
-                <p>{card.interpretations}</p>
-            </div>
-        </div>
-    );
-}
 
 export default OneCardDealView;
-
 
