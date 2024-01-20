@@ -1,19 +1,12 @@
-import React from 'react';
-
 function TarotCard({ card }) {
-    // Format the card name to match the file naming convention
-    // Replace spaces and special characters as needed to match the image file names
-    const formattedName = card.name.replace(/ /g, ''); // Example: replaces spaces with nothing
-    const imageUrl = `/images/tarot/${formattedName}.png`;
+    const imageUrl = `/images/${card.imageName}.png`; // Using the `imageName` for the image file
 
     return (
         <div>
             <h3>{card.name}</h3>
-            <img src={imageUrl} alt={card.name} />
+            <img src={imageUrl} alt={card.name} className="card-animation" style={{ width: '300px', height: '300px' }} />
             <p>{card.interpretations}</p>
         </div>
     );
 }
-
-export default TarotCard;
 
