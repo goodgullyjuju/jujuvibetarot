@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/jujuvibetarot/static/css/main.e41bb517.css",
+    "main.js": "/jujuvibetarot/static/js/main.27756e10.js",
+    "static/js/787.fee2f562.chunk.js": "/jujuvibetarot/static/js/787.fee2f562.chunk.js",
+    "index.html": "/jujuvibetarot/index.html",
+    "main.e41bb517.css.map": "/jujuvibetarot/static/css/main.e41bb517.css.map",
+    "main.27756e10.js.map": "/jujuvibetarot/static/js/main.27756e10.js.map",
+    "787.fee2f562.chunk.js.map": "/jujuvibetarot/static/js/787.fee2f562.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e41bb517.css",
+    "static/js/main.27756e10.js"
+  ]
+}
