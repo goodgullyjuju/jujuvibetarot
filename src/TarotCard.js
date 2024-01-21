@@ -10,3 +10,4 @@ function TarotCard({ card }) {
     );
 }
 
+export default TarotCard;
