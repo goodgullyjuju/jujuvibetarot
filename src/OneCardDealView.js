@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import TarotButton from './TarotButton';
 import './OneCardDealView.css';
-import CardView from './CardView'; 
+import CardView from './CardView';
 
 function OneCardDealView() {
     const [cards, setCards] = useState([]);
@@ -10,24 +10,22 @@ function OneCardDealView() {
     const [redrawCounter, setRedrawCounter] = useState(0);
     const [showingSaveAlert, setShowingSaveAlert] = useState(false);
 
-    // Memoize the drawCard function
+    // Define drawCard function
     const drawCard = useCallback(() => {
         if (cards.length === 0) return;
         setShowCard(false);
         const newCard = cards[Math.floor(Math.random() * cards.length)];
         setDrawnCard(newCard);
         setRedrawCounter(prevCounter => prevCounter + 1);
-    }, [cards]); // Dependency for useCallback
+    }, [cards]);
 
+    // Fetch cards data only on component mount
     useEffect(() => {
         fetch('/TarotCards.json')
             .then(response => response.json())
-            .then(data => {
-                setCards(data);
-                drawCard(); // Directly call drawCard without passing data
-            })
+            .then(data => setCards(data))
             .catch(error => console.error('Error fetching data:', error));
-    }, [drawCard]); // Include drawCard in the dependency array of useEffect
+    }, []);
 
     const saveEntry = () => {
         setShowingSaveAlert(true);
@@ -42,7 +40,10 @@ function OneCardDealView() {
                     <TarotButton title="Save Entry" onClick={saveEntry} />
                 </>
             )}
-            {!drawnCard && <TarotButton title="Draw a Card" onClick={drawCard} />}
+            {!drawnCard && (
+                // Initial draw of a card when there is none
+                <TarotButton title="Draw a Card" onClick={drawCard} />
+            )}
             {showingSaveAlert && <div>Saved! Your card has been saved to the journal.</div>}
         </div>
     );
