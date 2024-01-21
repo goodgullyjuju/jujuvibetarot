@@ -1,13 +1,17 @@
 import React from 'react';
-import ContentView from './ContentView';
+import { Routes, Route } from 'react-router-dom';
+import OneCardDealView from './OneCardDealView';
 
 function App() {
-    return (
-        <div className="App">
-            <ContentView />
-        </div>
-    );
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<OneCardDealView />} />
+        {/* Add more routes here if necessary */}
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
-;
+
