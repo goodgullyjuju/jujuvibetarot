@@ -47,4 +47,5 @@
     "deploy": "gh-pages -d build",
     ...
   }
-  }
+  "homepage": "https://goodgullyjuju.github.io/jujuvibetarot/",
+}
