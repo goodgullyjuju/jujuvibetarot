@@ -17,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -41,11 +43,6 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/plugin-transform-private-property-in-object": "^7.23.4",
     "gh-pages": "^6.1.1"
-  }
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    ...
-  }
-  "homepage": "https://goodgullyjuju.github.io/jujuvibetarot/",
+  },
+  "homepage": "https://goodgullyjuju.github.io/jujuvibetarot/"
 }
