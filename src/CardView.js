@@ -1,7 +1,8 @@
 import React from 'react';
 
 function CardView({ card, showCard, redrawCounter }) {
-    const imageUrl = `${process.env.PUBLIC_URL}/images/${card.imageName}.png`; // Updated image URL
+    const imageUrl = `${process.env.PUBLIC_URL}/jujuvibetarot/images/${card.imageName}.png`;
+
 
     return (
         <div>
