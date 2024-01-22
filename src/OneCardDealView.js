@@ -21,11 +21,12 @@ function OneCardDealView() {
 
     // Fetch cards data only on component mount
     useEffect(() => {
-        fetch(process.env.PUBLIC_URL + '/TarotCards.json')
+        fetch('https://goodgullyjuju.github.io/jujuvibetarot/TarotCards.json')
             .then(response => response.json())
             .then(data => setCards(data))
             .catch(error => console.error('Error fetching data:', error));
     }, []);
+    
     
 
     const saveEntry = () => {
