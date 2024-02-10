@@ -28,7 +28,11 @@ function GalleryView({ goBack }) {
     setSelectedCategory(category);
   };
 
-  // New function to handle image clicks
+  // Define filteredCards here based on the selectedCategory
+  const filteredCards = selectedCategory
+    ? cards.filter(categories.find((cat) => cat.name === selectedCategory)?.filter)
+    : [];
+
   const handleImageClick = (imageName) => {
     setSelectedImage(`${process.env.PUBLIC_URL}/images/${imageName}.png`); // Set the clicked image
     setIsModalOpen(true); // Open the modal
@@ -48,11 +52,13 @@ function GalleryView({ goBack }) {
             </div>
           ))}
         </>
-      ) : categories.map((category) => (
-        <TarotButton key={category.name} title={category.name} onClick={() => handleCategorySelect(category.name)} />
-      ))}
+      ) : (
+        categories.map((category) => (
+          <TarotButton key={category.name} title={category.name} onClick={() => handleCategorySelect(category.name)} />
+        ))
+      )}
       {isModalOpen && (
-        <div className="modal" onClick={() => setIsModalOpen(false)}> {/* Close modal on click */}
+        <div className="modal" onClick={() => setIsModalOpen(false)}>
           <img src={selectedImage} alt="Enlarged tarot card" className="modalImage" />
         </div>
       )}
