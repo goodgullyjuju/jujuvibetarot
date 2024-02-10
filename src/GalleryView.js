@@ -3,7 +3,7 @@ import TarotButton from './TarotButton';
 
 const categories = [
   { name: 'All Tarot Cards', filter: (card) => card.id <= 77 },
-  { name: 'Higher Arcana', filter: (card) => card.id <= 21 },
+  { name: 'Major Arcana', filter: (card) => card.id <= 21 }, // Changed "Higher Arcana" to "Major Arcana"
   { name: 'Wands', filter: (card) => card.id >= 22 && card.id <= 35 },
   { name: 'Cups', filter: (card) => card.id >= 36 && card.id <= 49 },
   { name: 'Swords', filter: (card) => card.id >= 50 && card.id <= 63 },
@@ -15,7 +15,7 @@ function GalleryView() {
   const [selectedCategory, setSelectedCategory] = useState('');
 
   useEffect(() => {
-    fetch(process.env.PUBLIC_URL + '/TarotCards.json')
+    fetch(`${process.env.PUBLIC_URL}/TarotCards.json`)
       .then((response) => response.json())
       .then(setCards)
       .catch(console.error);
@@ -34,7 +34,8 @@ function GalleryView() {
           <TarotButton title="Back" onClick={() => setSelectedCategory('')} />
           {filteredCards.map((card) => (
             <div key={card.id}>
-              <img src={`${process.env.PUBLIC_URL}/images/${card.imageName}.jpg`} alt={card.name} />
+              {/* Changed the file extension from .jpg to .png */}
+              <img src={`${process.env.PUBLIC_URL}/images/${card.imageName}.png`} alt={card.name} />
               <h3>{card.name}</h3>
               <p>{card.interpretations}</p>
             </div>
