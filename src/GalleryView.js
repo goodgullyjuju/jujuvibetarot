@@ -4,14 +4,14 @@ import './GalleryView.css'; // Assuming you have a CSS file for GalleryView
 
 const categories = [
   { name: 'All Tarot Cards', filter: (card) => card.id <= 77 },
-  { name: 'Major Arcana', filter: (card) => card.id <= 21 }, // Changed "Higher Arcana" to "Major Arcana"
+  { name: 'Major Arcana', filter: (card) => card.id <= 21 },
   { name: 'Wands', filter: (card) => card.id >= 22 && card.id <= 35 },
   { name: 'Cups', filter: (card) => card.id >= 36 && card.id <= 49 },
   { name: 'Swords', filter: (card) => card.id >= 50 && card.id <= 63 },
   { name: 'Pentacles', filter: (card) => card.id >= 64 && card.id <= 77 },
 ];
 
-function GalleryView({ goBack }) { // Accept goBack as a prop
+function GalleryView({ goBack }) {
   const [cards, setCards] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
 
@@ -26,12 +26,20 @@ function GalleryView({ goBack }) { // Accept goBack as a prop
     setSelectedCategory(category);
   };
 
+  // Define filteredCards here based on the selectedCategory
+  const filteredCards = selectedCategory
+    ? cards.filter(categories.find((cat) => cat.name === selectedCategory)?.filter || (() => true))
+    : [];
+
   return (
     <div>
-      <TarotButton title="Back to Main" onClick={goBack} /> {/* Add this line for the global "Back" button */}
+      {/* Global "Back to Main" button */}
+      <TarotButton title="Back to Main" onClick={goBack} />
+      
       {selectedCategory ? (
         <>
-          <TarotButton title="Back to Categories" onClick={() => setSelectedCategory('')} /> {/* Local back button */}
+          {/* Local "Back to Categories" button */}
+          <TarotButton title="Back to Categories" onClick={() => setSelectedCategory('')} />
           {filteredCards.map((card) => (
             <div key={card.id}>
               <img src={`${process.env.PUBLIC_URL}/images/${card.imageName}.png`} alt={card.name} />
