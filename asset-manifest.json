@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/jujuvibetarot/static/css/main.080e1ff4.css",
-    "main.js": "/jujuvibetarot/static/js/main.9e640378.js",
+    "main.js": "/jujuvibetarot/static/js/main.a5427680.js",
     "index.html": "/jujuvibetarot/index.html",
     "main.080e1ff4.css.map": "/jujuvibetarot/static/css/main.080e1ff4.css.map",
-    "main.9e640378.js.map": "/jujuvibetarot/static/js/main.9e640378.js.map"
+    "main.a5427680.js.map": "/jujuvibetarot/static/js/main.a5427680.js.map"
   },
   "entrypoints": [
     "static/css/main.080e1ff4.css",
-    "static/js/main.9e640378.js"
+    "static/js/main.a5427680.js"
   ]
 }
