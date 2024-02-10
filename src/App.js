@@ -1,18 +1,23 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import OneCardDealView from './OneCardDealView';
-import CardView from './CardView';
+import ThreeCardDealView from './ThreeCardDealView';
+import CelticCrossSpreadView from './CelticCrossSpreadView';
+import GalleryView from './GalleryView';
+import JournalView from './JournalView';
 import ContentView from './ContentView';
-import TarotCard from './TarotCard';
+// Assuming CardView and TarotCard are used within specific views, not as standalone routes
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<OneCardDealView />} />
-        <Route path="/" element={<CardView />} />
         <Route path="/" element={<ContentView />} />
-        <Route path="/" element={<TarotCard />} />
+        <Route path="/draw-one-card" element={<OneCardDealView />} />
+        <Route path="/draw-three-cards" element={<ThreeCardDealView />} />
+        <Route path="/celtic-cross-spread" element={<CelticCrossSpreadView />} />
+        <Route path="/gallery" element={<GalleryView />} />
+        <Route path="/journal" element={<JournalView />} />
         {/* Add more routes here if necessary */}
       </Routes>
     </div>
@@ -20,4 +25,3 @@ function App() {
 }
 
 export default App;
-
