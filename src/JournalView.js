@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import TarotButton from './TarotButton'; // Import TarotButton
+import './JournalView.css'; // Import the CSS file
 
-function JournalView({ goBack }) { // Accept goBack as a prop
+function JournalView({ goBack }) {
   const [journalEntries, setJournalEntries] = useState([]);
 
   useEffect(() => {
@@ -28,13 +29,14 @@ function JournalView({ goBack }) { // Accept goBack as a prop
 
   return (
     <div>
-      <TarotButton title="Back" onClick={goBack} /> {/* Use goBack here */}
+      <TarotButton title="Back" onClick={goBack} />
       <h2>Journal Entries</h2>
       {journalEntries.map((entry) => (
-        <div key={entry.id}>
+        <div key={entry.id} className="cardContainer"> {/* Apply the .cardContainer class */}
           <h3>{new Date(entry.date).toLocaleDateString()}</h3>
           {entry.drawnCards.map((card, index) => (
             <div key={index}>
+              <img src={`${process.env.PUBLIC_URL}/images/${card.imageName}.png`} alt={card.name} className="cardImage" /> {/* Apply the .cardImage class */}
               <p>Position: {card.position}</p>
               <p>Card: {card.name}</p>
               <p>Interpretation: {card.interpretations}</p>
