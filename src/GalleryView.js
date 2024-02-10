@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TarotButton from './TarotButton';
-import './GalleryView.css'; // Assuming you have a CSS file for GalleryView
+import './GalleryView.css'; // Ensure this CSS file contains the updated styles
 
 const categories = [
   { name: 'All Tarot Cards', filter: (card) => card.id <= 77 },
@@ -26,23 +26,20 @@ function GalleryView({ goBack }) {
     setSelectedCategory(category);
   };
 
-  // Define filteredCards here based on the selectedCategory
   const filteredCards = selectedCategory
     ? cards.filter(categories.find((cat) => cat.name === selectedCategory)?.filter || (() => true))
     : [];
 
   return (
     <div>
-      {/* Global "Back to Main" button */}
       <TarotButton title="Back to Main" onClick={goBack} />
       
       {selectedCategory ? (
         <>
-          {/* Local "Back to Categories" button */}
           <TarotButton title="Back to Categories" onClick={() => setSelectedCategory('')} />
           {filteredCards.map((card) => (
-            <div key={card.id}>
-              <img src={`${process.env.PUBLIC_URL}/images/${card.imageName}.png`} alt={card.name} />
+            <div key={card.id} className="cardContainer"> {/* Apply the .cardContainer class */}
+              <img src={`${process.env.PUBLIC_URL}/images/${card.imageName}.png`} alt={card.name} className="cardImage" /> {/* Apply the .cardImage class */}
               <h3>{card.name}</h3>
               <p>{card.interpretations}</p>
             </div>
