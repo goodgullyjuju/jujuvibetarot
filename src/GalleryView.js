@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import TarotButton from './TarotButton'; // Assuming this is a reusable button component
+import TarotButton from './TarotButton';
 
 const categories = [
   { name: 'All Tarot Cards', filter: (card) => card.id <= 77 },
@@ -15,7 +15,7 @@ function GalleryView() {
   const [selectedCategory, setSelectedCategory] = useState('');
 
   useEffect(() => {
-    fetch('path/to/TarotCards.json')
+    fetch(process.env.PUBLIC_URL + '/TarotCards.json')
       .then((response) => response.json())
       .then(setCards)
       .catch(console.error);
@@ -34,7 +34,7 @@ function GalleryView() {
           <TarotButton title="Back" onClick={() => setSelectedCategory('')} />
           {filteredCards.map((card) => (
             <div key={card.id}>
-              <img src={`path/to/images/${card.imageName}.jpg`} alt={card.name} />
+              <img src={`${process.env.PUBLIC_URL}/images/${card.imageName}.jpg`} alt={card.name} />
               <h3>{card.name}</h3>
               <p>{card.interpretations}</p>
             </div>

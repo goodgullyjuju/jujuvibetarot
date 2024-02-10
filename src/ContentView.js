@@ -5,21 +5,25 @@ import ThreeCardDealView from './ThreeCardDealView';
 import CelticCrossSpreadView from './CelticCrossSpreadView';
 import GalleryView from './GalleryView';
 import JournalView from './JournalView';
+
 function ContentView() {
     const [currentView, setCurrentView] = useState('');
+
+    // Function to reset the currentView
+    const goBack = () => setCurrentView('');
 
     const renderView = () => {
         switch (currentView) {
             case 'drawOne':
-                return <OneCardDealView />;
+                return <OneCardDealView goBack={goBack} />;
             case 'drawThree':
-                return <ThreeCardDealView />;
+                return <ThreeCardDealView goBack={goBack} />;
             case 'celticCross':
-                return <CelticCrossSpreadView />;
+                return <CelticCrossSpreadView goBack={goBack} />;
             case 'gallery':
-                return <GalleryView />;
+                return <GalleryView goBack={goBack} />;
             case 'journal':
-                return <JournalView />;
+                return <JournalView goBack={goBack} />;
             default:
                 return (
                     <div>

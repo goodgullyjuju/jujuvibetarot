@@ -4,13 +4,13 @@ import './OneCardDealView.css';
 import CardView from './CardView';
 import { saveJournalEntry } from './journalUtils.js'; // Ensure this path is correct
 
-function OneCardDealView() {
+function OneCardDealView({ goBack }) {
     const [cards, setCards] = useState([]);
     const [drawnCard, setDrawnCard] = useState(null);
     const [showCard, setShowCard] = useState(false);
     const [redrawCounter, setRedrawCounter] = useState(0);
     const [showingSaveAlert, setShowingSaveAlert] = useState(false);
-    const [comment, setComment] = useState(""); // Add state to handle comments
+    const [comment, setComment] = useState(""); // State to handle comments
 
     useEffect(() => {
         fetch('https://goodgullyjuju.github.io/jujuvibetarot/TarotCards.json')
@@ -45,13 +45,15 @@ function OneCardDealView() {
 
     return (
         <div style={{ backgroundColor: 'white', padding: '1rem' }}>
+            <TarotButton title="Back" onClick={goBack} /> {/* Back button to return to the main view */}
             {drawnCard && (
                 <>
                     <CardView card={drawnCard} showCard={showCard} redrawCounter={redrawCounter} />
                     <textarea 
                       placeholder="Add comments about your reading here..." 
                       value={comment}
-                      onChange={(e) => setComment(e.target.value)} 
+                      onChange={(e) => setComment(e.target.value)}
+                      style={{ width: "100%", margin: "10px 0" }}
                     />
                     <TarotButton title="Draw Another Card" onClick={drawCard} />
                     <TarotButton title="Save Entry" onClick={saveEntry} />

@@ -26,7 +26,7 @@ function JournalView() {
   };
 
   return (
-    <div>
+    <div><TarotButton title="Back" onClick={goBack} /> {/* Render the "Back" button */}
       <h2>Journal Entries</h2>
       {journalEntries.map((entry) => (
         <div key={entry.id}>

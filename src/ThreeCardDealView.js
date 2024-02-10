@@ -3,7 +3,7 @@ import TarotButton from './TarotButton';
 import CardView from './CardView';
 import { saveJournalEntry } from './journalUtils.js'; // Adjust the path as needed
 
-function ThreeCardDealView() {
+function ThreeCardDealView({ goBack }) { // Accepting goBack prop
     const [cards, setCards] = useState([]);
     const [drawnCards, setDrawnCards] = useState([]);
     const [showSpreadOptions, setShowSpreadOptions] = useState(false);
@@ -61,6 +61,7 @@ function ThreeCardDealView() {
 
     return (
         <div style={{ backgroundColor: 'white', padding: '1rem' }}>
+            <TarotButton title="Back" onClick={goBack} /> {/* Render the "Back" button */}
             {!showSpreadOptions && !selectedSpread && (
                 <TarotButton title="Draw Three Cards" onClick={drawThreeCards} />
             )}

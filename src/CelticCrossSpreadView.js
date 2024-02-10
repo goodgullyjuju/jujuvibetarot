@@ -3,7 +3,7 @@ import TarotButton from './TarotButton';
 import CardView from './CardView';
 import { saveJournalEntry } from './journalUtils.js'; // Ensure this path is correct
 
-function CelticCrossSpreadView() {
+function CelticCrossSpreadView({ onBack }) { // Assuming onBack is a prop function to handle "Back" navigation
     const [cards, setCards] = useState([]);
     const [drawnCards, setDrawnCards] = useState([]);
     const [showSpread, setShowSpread] = useState(false);
@@ -44,10 +44,10 @@ function CelticCrossSpreadView() {
                     position: celticCrossPositions[index],
                 })),
                 spreadType: "CelticCross",
-                comments: comments // Include comments in the saved entry
+                comments: comments
             };
             saveJournalEntry(newEntry);
-            setComments(""); // Clear comments after saving
+            setComments("");
             setShowingSaveAlert(true);
             setTimeout(() => setShowingSaveAlert(false), 3000);
         }
@@ -55,10 +55,14 @@ function CelticCrossSpreadView() {
 
     return (
         <div style={{ backgroundColor: 'white', padding: '1rem' }}>
+            <<TarotButton title="Back" onClick={goBack} /> {/* Render the "Back" button */}
             {showSpread ? (
                 <>
                     {drawnCards.map((card, index) => (
-                        <CardView key={index} card={card} showCard={true} position={celticCrossPositions[index]} />
+                        <div key={index}>
+                            <h3>{celticCrossPositions[index]}</h3> {/* Display the position label */}
+                            <CardView card={card} showCard={true} />
+                        </div>
                     ))}
                     <textarea
                         placeholder="Add comments about your spread here..."
