@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import TarotButton from './TarotButton';
 import CardView from './CardView';
-import { saveJournalEntry } from './journalUtils'; // Ensure this path is correct
+import { saveJournalEntry } from './journalUtils.js'; // Ensure this path is correct
 
 function CelticCrossSpreadView() {
     const [cards, setCards] = useState([]);

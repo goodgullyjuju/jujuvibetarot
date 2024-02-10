@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import TarotButton from './TarotButton';
 import CardView from './CardView';
-import { saveJournalEntry } from './journalUtils'; // Adjust the path as needed
+import { saveJournalEntry } from './journalUtils.js'; // Adjust the path as needed
 
 function ThreeCardDealView() {
     const [cards, setCards] = useState([]);

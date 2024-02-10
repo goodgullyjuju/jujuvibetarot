@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import TarotButton from './TarotButton';
 import './OneCardDealView.css';
 import CardView from './CardView';
-import { saveJournalEntry } from './journalUtils'; // Ensure this path is correct
+import { saveJournalEntry } from './journalUtils.js'; // Ensure this path is correct
 
 function OneCardDealView() {
     const [cards, setCards] = useState([]);
