@@ -1,0 +1,10 @@
+.cardContainer {
+    margin-bottom: 20px; /* Adds some space between cards */
+  }
+  
+  .cardImage {
+    width: 300px; /* Set a fixed width to 300px */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners to your images */
+  }
+  

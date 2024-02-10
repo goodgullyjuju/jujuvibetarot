@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TarotButton from './TarotButton';
+import './GalleryView.css'; // Assuming you have a CSS file for GalleryView
 
 const categories = [
   { name: 'All Tarot Cards', filter: (card) => card.id <= 77 },
@@ -10,7 +11,7 @@ const categories = [
   { name: 'Pentacles', filter: (card) => card.id >= 64 && card.id <= 77 },
 ];
 
-function GalleryView() {
+function GalleryView({ goBack }) { // Accept goBack as a prop
   const [cards, setCards] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
 
@@ -25,16 +26,14 @@ function GalleryView() {
     setSelectedCategory(category);
   };
 
-  const filteredCards = cards.filter(categories.find((cat) => cat.name === selectedCategory)?.filter || (() => true));
-
   return (
     <div>
+      <TarotButton title="Back to Main" onClick={goBack} /> {/* Add this line for the global "Back" button */}
       {selectedCategory ? (
         <>
-          <TarotButton title="Back" onClick={() => setSelectedCategory('')} />
+          <TarotButton title="Back to Categories" onClick={() => setSelectedCategory('')} /> {/* Local back button */}
           {filteredCards.map((card) => (
             <div key={card.id}>
-              {/* Changed the file extension from .jpg to .png */}
               <img src={`${process.env.PUBLIC_URL}/images/${card.imageName}.png`} alt={card.name} />
               <h3>{card.name}</h3>
               <p>{card.interpretations}</p>
