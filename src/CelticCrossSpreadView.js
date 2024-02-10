@@ -3,7 +3,7 @@ import TarotButton from './TarotButton';
 import CardView from './CardView';
 import { saveJournalEntry } from './journalUtils.js'; // Ensure this path is correct
 
-function CelticCrossSpreadView({ onBack }) { // Assuming onBack is a prop function to handle "Back" navigation
+function CelticCrossSpreadView({ goBack }) { // Corrected to use goBack based on previous context
     const [cards, setCards] = useState([]);
     const [drawnCards, setDrawnCards] = useState([]);
     const [showSpread, setShowSpread] = useState(false);
@@ -44,10 +44,10 @@ function CelticCrossSpreadView({ onBack }) { // Assuming onBack is a prop functi
                     position: celticCrossPositions[index],
                 })),
                 spreadType: "CelticCross",
-                comments: comments
+                comments: comments // Include comments in the saved entry
             };
             saveJournalEntry(newEntry);
-            setComments("");
+            setComments(""); // Clear comments after saving
             setShowingSaveAlert(true);
             setTimeout(() => setShowingSaveAlert(false), 3000);
         }
@@ -55,7 +55,7 @@ function CelticCrossSpreadView({ onBack }) { // Assuming onBack is a prop functi
 
     return (
         <div style={{ backgroundColor: 'white', padding: '1rem' }}>
-            <<TarotButton title="Back" onClick={goBack} /> {/* Render the "Back" button */}
+            <TarotButton title="Back" onClick={goBack} /> {/* Corrected line */}
             {showSpread ? (
                 <>
                     {drawnCards.map((card, index) => (
