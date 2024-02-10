@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import TarotButton from './TarotButton'; // Import TarotButton
 
-function JournalView() {
+function JournalView({ goBack }) { // Accept goBack as a prop
   const [journalEntries, setJournalEntries] = useState([]);
 
   useEffect(() => {
@@ -26,7 +27,8 @@ function JournalView() {
   };
 
   return (
-    <div><TarotButton title="Back" onClick={goBack} /> {/* Render the "Back" button */}
+    <div>
+      <TarotButton title="Back" onClick={goBack} /> {/* Use goBack here */}
       <h2>Journal Entries</h2>
       {journalEntries.map((entry) => (
         <div key={entry.id}>
