@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TarotButton from './TarotButton';
-import './GalleryView.css'; // Ensure this CSS file contains the updated styles
+import './GalleryView.css'; // Make sure this file is correctly linked
 
 const categories = [
   { name: 'All Tarot Cards', filter: (card) => card.id <= 77 },
@@ -14,10 +14,12 @@ const categories = [
 function GalleryView({ goBack }) {
   const [cards, setCards] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false); // To manage modal visibility
+  const [selectedImage, setSelectedImage] = useState(''); // To store the selected image
 
   useEffect(() => {
     fetch(`${process.env.PUBLIC_URL}/TarotCards.json`)
-      .then((response) => response.json())
+      .then(response => response.json())
       .then(setCards)
       .catch(console.error);
   }, []);
@@ -26,29 +28,33 @@ function GalleryView({ goBack }) {
     setSelectedCategory(category);
   };
 
-  const filteredCards = selectedCategory
-    ? cards.filter(categories.find((cat) => cat.name === selectedCategory)?.filter || (() => true))
-    : [];
+  // New function to handle image clicks
+  const handleImageClick = (imageName) => {
+    setSelectedImage(`${process.env.PUBLIC_URL}/images/${imageName}.png`); // Set the clicked image
+    setIsModalOpen(true); // Open the modal
+  };
 
   return (
     <div>
       <TarotButton title="Back to Main" onClick={goBack} />
-      
       {selectedCategory ? (
         <>
           <TarotButton title="Back to Categories" onClick={() => setSelectedCategory('')} />
           {filteredCards.map((card) => (
-            <div key={card.id} className="cardContainer"> {/* Apply the .cardContainer class */}
-              <img src={`${process.env.PUBLIC_URL}/images/${card.imageName}.png`} alt={card.name} className="cardImage" /> {/* Apply the .cardImage class */}
+            <div key={card.id} className="cardContainer" onClick={() => handleImageClick(card.imageName)}>
+              <img src={`${process.env.PUBLIC_URL}/images/${card.imageName}.png`} alt={card.name} className="cardImage" />
               <h3>{card.name}</h3>
               <p>{card.interpretations}</p>
             </div>
           ))}
         </>
-      ) : (
-        categories.map((category) => (
-          <TarotButton key={category.name} title={category.name} onClick={() => handleCategorySelect(category.name)} />
-        ))
+      ) : categories.map((category) => (
+        <TarotButton key={category.name} title={category.name} onClick={() => handleCategorySelect(category.name)} />
+      ))}
+      {isModalOpen && (
+        <div className="modal" onClick={() => setIsModalOpen(false)}> {/* Close modal on click */}
+          <img src={selectedImage} alt="Enlarged tarot card" className="modalImage" />
+        </div>
       )}
     </div>
   );
