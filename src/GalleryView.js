@@ -14,8 +14,8 @@ const categories = [
 function GalleryView({ goBack }) {
   const [cards, setCards] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
-  const [isModalOpen, setIsModalOpen] = useState(false); // To manage modal visibility
-  const [selectedImage, setSelectedImage] = useState(''); // To store the selected image
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState('');
 
   useEffect(() => {
     fetch(`${process.env.PUBLIC_URL}/TarotCards.json`)
@@ -28,14 +28,14 @@ function GalleryView({ goBack }) {
     setSelectedCategory(category);
   };
 
-  // Define filteredCards here based on the selectedCategory
-  const filteredCards = selectedCategory
-    ? cards.filter(categories.find((cat) => cat.name === selectedCategory)?.filter)
-    : [];
-
   const handleImageClick = (imageName) => {
-    setSelectedImage(`${process.env.PUBLIC_URL}/images/${imageName}.png`); // Set the clicked image
-    setIsModalOpen(true); // Open the modal
+    setSelectedImage(`${process.env.PUBLIC_URL}/images/${imageName}.png`);
+    setIsModalOpen(true);
+  };
+
+  // Function to close the modal
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -44,7 +44,7 @@ function GalleryView({ goBack }) {
       {selectedCategory ? (
         <>
           <TarotButton title="Back to Categories" onClick={() => setSelectedCategory('')} />
-          {filteredCards.map((card) => (
+          {cards.filter(categories.find(cat => cat.name === selectedCategory)?.filter || (() => true)).map((card) => (
             <div key={card.id} className="cardContainer" onClick={() => handleImageClick(card.imageName)}>
               <img src={`${process.env.PUBLIC_URL}/images/${card.imageName}.png`} alt={card.name} className="cardImage" />
               <h3>{card.name}</h3>
@@ -58,8 +58,9 @@ function GalleryView({ goBack }) {
         ))
       )}
       {isModalOpen && (
-        <div className="modal" onClick={() => setIsModalOpen(false)}>
-          <img src={selectedImage} alt="Enlarged tarot card" className="modalImage" />
+        <div className="modal" onClick={closeModal}>
+          <span className="closeModalButton" onClick={closeModal}>X</span>
+          <img src={selectedImage} alt="Enlarged tarot card" className="modalImage" onClick={(e) => e.stopPropagation()} />
         </div>
       )}
     </div>
