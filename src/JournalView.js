@@ -36,7 +36,7 @@ function JournalView({ goBack }) {
           <h3>{new Date(entry.date).toLocaleDateString()}</h3>
           {entry.drawnCards.map((card, index) => (
             <div key={index}>
-              <img src={`${process.env.PUBLIC_URL}/images/${card.imageName}.png`} alt={card.name} className="cardImage" /> {/* Apply the .cardImage class */}
+               <img src={`${process.env.PUBLIC_URL}/images/${card.imageName}.png`} alt={card.name} className="cardImage" />
               <p>Position: {card.position}</p>
               <p>Card: {card.name}</p>
               <p>Interpretation: {card.interpretations}</p>
