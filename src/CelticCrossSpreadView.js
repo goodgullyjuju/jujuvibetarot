@@ -44,7 +44,7 @@ function CelticCrossSpreadView({ goBack }) { // Corrected to use goBack based on
                     interpretations: card.interpretations,
                     position: card.position, // Ensure this is set for CelticCrossSpreadView
                 })),
-                spreadType: selectedSpread || "CelticCross", // Use "CelticCross" or other spread type as applicable
+                spreadType: "CelticCross", // Directly setting the spread type
                 comments: comments,
             };
             saveJournalEntry(newEntry);
