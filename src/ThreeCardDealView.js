@@ -39,18 +39,20 @@ function ThreeCardDealView({ goBack }) { // Accepting goBack prop
     };
 
     const saveEntry = () => {
-        if (drawnCards.length > 0 && selectedSpread) {
+        if (drawnCards.length > 0) {
             const newEntry = {
                 id: new Date().getTime(),
                 date: new Date().toISOString(),
                 drawnCards: drawnCards.map(card => ({
                     id: card.id,
                     name: card.name,
-                    image: card.imageName,
+                    // Ensure the imageName is set to the path used in the JournalView
+                    image: `/images/${card.imageName}.png`,
                     interpretations: card.interpretations,
+                    position: card.position, // Ensure this is set for CelticCrossSpreadView
                 })),
-                spreadType: selectedSpread,
-                comments: comments // Save comments with the entry
+                spreadType: selectedSpread || "CelticCross", // Use "CelticCross" or other spread type as applicable
+                comments: comments,
             };
             saveJournalEntry(newEntry);
             setComments(""); // Clear comments after saving
@@ -58,6 +60,7 @@ function ThreeCardDealView({ goBack }) { // Accepting goBack prop
             setTimeout(() => setShowingSaveAlert(false), 3000);
         }
     };
+    
 
     return (
         <div style={{ backgroundColor: 'white', padding: '1rem' }}>

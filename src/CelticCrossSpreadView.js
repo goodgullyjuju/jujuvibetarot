@@ -32,19 +32,20 @@ function CelticCrossSpreadView({ goBack }) { // Corrected to use goBack based on
     };
 
     const saveEntry = () => {
-        if (drawnCards.length === 10) {
+        if (drawnCards.length > 0) {
             const newEntry = {
                 id: new Date().getTime(),
                 date: new Date().toISOString(),
-                drawnCards: drawnCards.map((card, index) => ({
+                drawnCards: drawnCards.map(card => ({
                     id: card.id,
                     name: card.name,
-                    image: card.imageName,
+                    // Ensure the imageName is set to the path used in the JournalView
+                    image: `/images/${card.imageName}.png`,
                     interpretations: card.interpretations,
-                    position: celticCrossPositions[index],
+                    position: card.position, // Ensure this is set for CelticCrossSpreadView
                 })),
-                spreadType: "CelticCross",
-                comments: comments // Include comments in the saved entry
+                spreadType: selectedSpread || "CelticCross", // Use "CelticCross" or other spread type as applicable
+                comments: comments,
             };
             saveJournalEntry(newEntry);
             setComments(""); // Clear comments after saving
@@ -52,6 +53,7 @@ function CelticCrossSpreadView({ goBack }) { // Corrected to use goBack based on
             setTimeout(() => setShowingSaveAlert(false), 3000);
         }
     };
+    
 
     return (
         <div style={{ backgroundColor: 'white', padding: '1rem' }}>
