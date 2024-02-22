@@ -47,7 +47,7 @@ function ThreeCardDealView({ goBack }) { // Accepting goBack prop
                     id: card.id,
                     name: card.name,
                     // Ensure the imageName is set to the path used in the JournalView
-                    image: `/images/card.imageName.png`,
+                    image: card.imageName,
                     interpretations: card.interpretations,
                     position: card.position, // Ensure this is set for CelticCrossSpreadView
                 })),
