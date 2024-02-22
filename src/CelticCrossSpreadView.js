@@ -40,7 +40,7 @@ function CelticCrossSpreadView({ goBack }) { // Corrected to use goBack based on
                     id: card.id,
                     name: card.name,
                     // Ensure the imageName is set to the path used in the JournalView
-                    image: `${process.env.PUBLIC_URL}/images/${card.imageName}.png`,
+                    image: `/images/card.imageName.png`,
                     interpretations: card.interpretations,
                     position: card.position, // Ensure this is set for CelticCrossSpreadView
                 })),
