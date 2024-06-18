@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import TarotButton from './TarotButton';
 import './OneCardDealView.css';
-
 import { saveJournalEntry } from './journalUtils'; // Adjust this path if needed
 
 function OneCardDealView({ goBack }) {
@@ -54,15 +53,15 @@ function OneCardDealView({ goBack }) {
       <TarotButton title="Back" onClick={goBack} />
       {drawnCard && (
         <>
- <img
-                src={process.env.PUBLIC_URL + `/images/${drawnCard.imageName}.png`}
-                alt={drawnCard.name}
-                className="cardImage"
-                onError={(e) => { 
-                  e.target.onerror = null; 
-                  e.target.src = process.env.PUBLIC_URL + '/placeholderImage.png'; 
-                }}
-              />
+          <img
+            src={`/images/${drawnCard.imageName}.png`}
+            alt={drawnCard.name}
+            className="cardImage"
+            onError={(e) => { 
+              e.target.onerror = null; 
+              e.target.src = '/placeholderImage.png'; 
+            }}
+          />
           <textarea
             placeholder="Add comments about your reading here..."
             value={comment}

@@ -70,8 +70,9 @@ function JournalView({ goBack }) {
         <div key={entry.id} className="cardContainer">
           {/* ... (your other entry details) */}
           {entry.drawnCards.map((card, index) => (
-            <div key={index}>
-              <img 
+             <div key={index}>
+             {console.log("Image Name:", card.imageName)} // Add this line for debugging
+             <img 
                 src={process.env.PUBLIC_URL + `/images/${card.imageName}.png`} 
                 alt={card.name} 
                 className="cardImage"
