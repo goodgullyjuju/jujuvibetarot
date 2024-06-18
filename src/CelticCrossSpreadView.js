@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TarotButton from './TarotButton';
-import CardView from './CardView';
+
 import { saveJournalEntry } from './journalUtils.js'; // Ensure this path is correct
 
 function CelticCrossSpreadView({ goBack }) {
@@ -62,7 +62,12 @@ function CelticCrossSpreadView({ goBack }) {
                     {drawnCards.map((card, index) => (
                         <div key={index}>
                             <h3>{celticCrossPositions[index]}</h3> {/* Display the position label */}
-                            <CardView card={card} showCard={true} />
+                            <img
+                src={process.env.PUBLIC_URL + `/images/${card.imageName}.png`}
+                alt={card.name}
+                className="cardImage"
+                onError={(e) => { e.target.onerror = null; e.target.src = 'placeholderImage.png'}} 
+              />
                         </div>
                     ))}
                     <textarea

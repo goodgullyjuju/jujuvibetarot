@@ -75,7 +75,12 @@ function ThreeCardDealView({ goBack }) {
                     {drawnCards.map((card, index) => (
                         <div key={index}>
                             <h3>{selectedSpread.split(", ")[index]}</h3>
-                            <CardView card={card} showCard={true} />
+                            <img
+                src={process.env.PUBLIC_URL + `/images/${card.imageName}.png`}
+                alt={card.name}
+                className="cardImage"
+                onError={(e) => { e.target.onerror = null; e.target.src = 'placeholderImage.png'}} 
+              />
                         </div>
                     ))}
                     <textarea

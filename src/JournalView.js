@@ -67,23 +67,20 @@ function JournalView({ goBack }) {
         </label>
       </div>
       {journalEntries.map((entry) => (
-        <div key={entry.id} className="cardContainer"> {/* Apply the .cardContainer class */}
-          <h3>{new Date(entry.date).toLocaleDateString()}</h3>
+        <div key={entry.id} className="cardContainer">
+          {/* ... (your other entry details) */}
           {entry.drawnCards.map((card, index) => (
             <div key={index}>
-              <img src={`/images/${card.image}.png`} alt={card.name} className="cardImage" />
-              <p>Position: {card.position}</p>
-              <p>Card: {card.name}</p>
-              <p>Interpretation: {card.interpretations}</p>
+              <img 
+                src={process.env.PUBLIC_URL + `/images/${card.imageName}.png`} 
+                alt={card.name} 
+                className="cardImage"
+                onError={(e) => { e.target.onerror = null; e.target.src = 'placeholderImage.png'}}  // This line adds a fallback image if the card image fails to load
+              />
+              {/* ... (rest of your card details) */}
             </div>
           ))}
-          <textarea
-            placeholder="Comments"
-            value={entry.comments || ""}
-            onChange={(e) => updateComment(entry.id, e.target.value)}
-            onBlur={() => localStorage.setItem('journalEntries', JSON.stringify(journalEntries))}
-          />
-          <button onClick={() => deleteEntry(entry.id)}>Delete Entry</button>
+          {/* ... (rest of your entry details) */}
         </div>
       ))}
     </div>
