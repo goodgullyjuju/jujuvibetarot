@@ -38,8 +38,7 @@ function CelticCrossSpreadView({ goBack }) {
                 drawnCards: drawnCards.map((card, index) => ({
                     id: card.id,
                     name: card.name,
-                    // Ensure the imageName is set to the path used in the JournalView
-                    image: card.imageName,
+                    imageName: card.imageName,
                     interpretations: card.interpretations,
                     position: celticCrossPositions[index],
                 })),
@@ -62,12 +61,12 @@ function CelticCrossSpreadView({ goBack }) {
                         <div key={index}>
                             <h3>{celticCrossPositions[index]}</h3> {/* Display the position label */}
                             <img
-                                src={`/images/${card.imageName}.png`}
+                                src={process.env.PUBLIC_URL + `/images/${card.imageName}.png`}
                                 alt={card.name}
                                 className="cardImage"
                                 onError={(e) => { 
                                     e.target.onerror = null; 
-                                    e.target.src = '/placeholderImage.png'; 
+                                    e.target.src = process.env.PUBLIC_URL + '/placeholderImage.png'; 
                                 }}
                             />
                         </div>
