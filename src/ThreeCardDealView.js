@@ -45,8 +45,7 @@ function ThreeCardDealView({ goBack }) {
                 drawnCards: drawnCards.map(card => ({
                     id: card.id,
                     name: card.name,
-                    // Ensure the imageName is set to the path used in the JournalView
-                    image: card.imageName,
+                    imageName: card.imageName,
                     interpretations: card.interpretations,
                     position: card.position, // Ensure this is set for CelticCrossSpreadView
                 })),
@@ -75,12 +74,12 @@ function ThreeCardDealView({ goBack }) {
                         <div key={index}>
                             <h3>{selectedSpread.split(", ")[index]}</h3>
                             <img
-                                src={`/images/${card.imageName}.png`}
+                                src={process.env.PUBLIC_URL + `/images/${card.imageName}.png`}
                                 alt={card.name}
                                 className="cardImage"
                                 onError={(e) => { 
                                     e.target.onerror = null; 
-                                    e.target.src = '/placeholderImage.png'; 
+                                    e.target.src = process.env.PUBLIC_URL + '/placeholderImage.png'; 
                                 }}
                             />
                         </div>
