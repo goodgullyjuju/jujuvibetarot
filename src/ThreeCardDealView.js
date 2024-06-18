@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import TarotButton from './TarotButton';
-
 import { saveJournalEntry } from './journalUtils.js'; // Adjust the path as needed
 
 function ThreeCardDealView({ goBack }) {
@@ -76,14 +75,14 @@ function ThreeCardDealView({ goBack }) {
                         <div key={index}>
                             <h3>{selectedSpread.split(", ")[index]}</h3>
                             <img
-                src={process.env.PUBLIC_URL + `/images/${card.imageName}.png`}
-                alt={card.name}
-                className="cardImage"
-                onError={(e) => { 
-                    e.target.onerror = null; 
-                    e.target.src = process.env.PUBLIC_URL + '/placeholderImage.png'; // Access placeholder from public folder
-                  }}
-              />
+                                src={`/images/${card.imageName}.png`}
+                                alt={card.name}
+                                className="cardImage"
+                                onError={(e) => { 
+                                    e.target.onerror = null; 
+                                    e.target.src = '/placeholderImage.png'; 
+                                }}
+                            />
                         </div>
                     ))}
                     <textarea
