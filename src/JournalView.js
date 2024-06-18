@@ -71,9 +71,8 @@ function JournalView({ goBack }) {
           <h3>{new Date(entry.date).toLocaleDateString()}</h3>
           {entry.drawnCards.map((card, index) => (
             <div key={index}>
-              {console.log("Image Name:", card.imageName)} {/* Debugging line */}
               <img 
-                src={`/images/${card.imageName}.png`} 
+                src={`/images/${card.image}.png`} 
                 alt={card.name} 
                 className="cardImage"
                 onError={(e) => { e.target.onerror = null; e.target.src = '/placeholderImage.png'; }} 
