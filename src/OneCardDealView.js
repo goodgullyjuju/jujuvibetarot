@@ -32,7 +32,13 @@ function OneCardDealView({ goBack }) {
       const newEntry = {
         id: new Date().getTime(),
         date: new Date().toISOString(),
-        drawnCards: [drawnCard],
+        drawnCards: [{ 
+          id: drawnCard.id, 
+          name: drawnCard.name,
+          image: drawnCard.imageName,
+          interpretations: drawnCard.interpretations,
+          position: "Single Card", // Optional, depending on your needs
+        }],
         spreadType: "SingleCard",
         comments: comment,
       };
