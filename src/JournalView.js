@@ -3,12 +3,12 @@ import TarotButton from './TarotButton'; // Import TarotButton
 import './JournalView.css'; // Import the CSS file
 
 function JournalView({ goBack }) {
-  const [journalEntries, setJournalEntries] = useState(null); // Initially set to null
+  const [journalEntries, setJournalEntries] = useState(null);
 
   useEffect(() => {
     const entries = JSON.parse(localStorage.getItem('journalEntries')) || [];
     setJournalEntries(entries);
-  }, []);
+  }, []); 
 
   const updateComment = (id, comment) => {
     const updatedEntries = journalEntries.map(entry => {
@@ -66,31 +66,35 @@ function JournalView({ goBack }) {
           <TarotButton title="Import Entries" />
         </label>
       </div>
-      {journalEntries.map((entry) => (
-        <div key={entry.id} className="cardContainer">
-          <h3>{new Date(entry.date).toLocaleDateString()}</h3>
-          {entry.drawnCards.map((card, index) => (
-            <div key={index}>
-              <img 
-                src={`/images/${card.image}.png`} 
-                alt={card.name} 
-                className="cardImage"
-                onError={(e) => { e.target.onerror = null; e.target.src = '/placeholderImage.png'; }} 
-              />
-              <p>Position: {card.position}</p>
-              <p>Card: {card.name}</p>
-              <p>Interpretation: {card.interpretations}</p>
-            </div>
-          ))}
-          <textarea
-            placeholder="Comments"
-            value={entry.comments || ""}
-            onChange={(e) => updateComment(entry.id, e.target.value)}
-            onBlur={() => localStorage.setItem('journalEntries', JSON.stringify(journalEntries))}
-          />
-          <button onClick={() => deleteEntry(entry.id)}>Delete Entry</button>
-        </div>
-      ))}
+      {!journalEntries ? (
+        <div>Loading...</div> // Or a loading spinner
+      ) : (
+        journalEntries.map((entry) => (
+          <div key={entry.id} className="cardContainer">
+            <h3>{new Date(entry.date).toLocaleDateString()}</h3>
+            {entry.drawnCards.map((card, index) => (
+              <div key={index}>
+                <img
+                  src={process.env.PUBLIC_URL + `/images/${card.imageName}.png`}
+                  alt={card.name}
+                  className="cardImage"
+                  onError={(e) => { e.target.onerror = null; e.target.src = process.env.PUBLIC_URL + '/placeholderImage.png'}}  
+                />
+                <p>Position: {card.position}</p>
+                <p>Card: {card.name}</p>
+                <p>Interpretation: {card.interpretations}</p>
+              </div>
+            ))}
+            <textarea
+              placeholder="Comments"
+              value={entry.comments || ""}
+              onChange={(e) => updateComment(entry.id, e.target.value)}
+              onBlur={() => localStorage.setItem('journalEntries', JSON.stringify(journalEntries))}
+            />
+            <button onClick={() => deleteEntry(entry.id)}>Delete Entry</button>
+          </div>
+        ))
+      )}
     </div>
   );
 }
