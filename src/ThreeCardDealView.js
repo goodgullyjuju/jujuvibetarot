@@ -3,7 +3,7 @@ import TarotButton from './TarotButton';
 import CardView from './CardView';
 import { saveJournalEntry } from './journalUtils.js'; // Adjust the path as needed
 
-function ThreeCardDealView({ goBack }) { // Accepting goBack prop
+function ThreeCardDealView({ goBack }) {
     const [cards, setCards] = useState([]);
     const [drawnCards, setDrawnCards] = useState([]);
     const [showSpreadOptions, setShowSpreadOptions] = useState(false);
@@ -47,11 +47,11 @@ function ThreeCardDealView({ goBack }) { // Accepting goBack prop
                     id: card.id,
                     name: card.name,
                     // Ensure the imageName is set to the path used in the JournalView
-                    image: `/images/card.imageName.png`,
+                    image: card.imageName,
                     interpretations: card.interpretations,
                     position: card.position, // Ensure this is set for CelticCrossSpreadView
                 })),
-                spreadType: selectedSpread || "CelticCross", // Use "CelticCross" or other spread type as applicable
+                spreadType: selectedSpread,
                 comments: comments,
             };
             saveJournalEntry(newEntry);
@@ -60,7 +60,6 @@ function ThreeCardDealView({ goBack }) { // Accepting goBack prop
             setTimeout(() => setShowingSaveAlert(false), 3000);
         }
     };
-    
 
     return (
         <div style={{ backgroundColor: 'white', padding: '1rem' }}>

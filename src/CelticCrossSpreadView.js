@@ -3,7 +3,7 @@ import TarotButton from './TarotButton';
 import CardView from './CardView';
 import { saveJournalEntry } from './journalUtils.js'; // Ensure this path is correct
 
-function CelticCrossSpreadView({ goBack }) { // Corrected to use goBack based on previous context
+function CelticCrossSpreadView({ goBack }) {
     const [cards, setCards] = useState([]);
     const [drawnCards, setDrawnCards] = useState([]);
     const [showSpread, setShowSpread] = useState(false);
@@ -36,13 +36,13 @@ function CelticCrossSpreadView({ goBack }) { // Corrected to use goBack based on
             const newEntry = {
                 id: new Date().getTime(),
                 date: new Date().toISOString(),
-                drawnCards: drawnCards.map(card => ({
+                drawnCards: drawnCards.map((card, index) => ({
                     id: card.id,
                     name: card.name,
                     // Ensure the imageName is set to the path used in the JournalView
-                    image: `/images/card.imageName.png`,
+                    image: card.imageName,
                     interpretations: card.interpretations,
-                    position: card.position, // Ensure this is set for CelticCrossSpreadView
+                    position: celticCrossPositions[index],
                 })),
                 spreadType: "CelticCross", // Directly setting the spread type
                 comments: comments,
@@ -53,7 +53,6 @@ function CelticCrossSpreadView({ goBack }) { // Corrected to use goBack based on
             setTimeout(() => setShowingSaveAlert(false), 3000);
         }
     };
-    
 
     return (
         <div style={{ backgroundColor: 'white', padding: '1rem' }}>
