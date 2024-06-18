@@ -34,7 +34,7 @@ function OneCardDealView({ goBack }) {
         drawnCards: [{ 
           id: drawnCard.id, 
           name: drawnCard.name,
-          image: drawnCard.imageName,
+          imageName: drawnCard.imageName,
           interpretations: drawnCard.interpretations,
           position: "Single Card", // Optional, depending on your needs
         }],
@@ -54,12 +54,12 @@ function OneCardDealView({ goBack }) {
       {drawnCard && (
         <>
           <img
-            src={`/images/${drawnCard.imageName}.png`}
+            src={process.env.PUBLIC_URL + `/images/${drawnCard.imageName}.png`}
             alt={drawnCard.name}
             className="cardImage"
             onError={(e) => { 
               e.target.onerror = null; 
-              e.target.src = '/placeholderImage.png'; 
+              e.target.src = process.env.PUBLIC_URL + '/placeholderImage.png'; 
             }}
           />
           <textarea
