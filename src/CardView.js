@@ -7,11 +7,14 @@ function CardView({ card, showCard, redrawCounter }) {
 
     return (
         <div>
-            <img src={imageUrl} alt={card.name} className="card-animation" style={{ width: 300, height: 300, transform: `rotateY(${showCard ? '0' : '180'}deg)` }} />
-            <h2>{card.name}</h2>
-            <div style={{ maxHeight: '300px', overflowY: 'auto' }}>
-                <p>{card.interpretations}</p>
-            </div>
+        <img 
+          src={imageUrl} 
+          alt={card.name} 
+          className="card-animation" 
+          style={{ width: 300, height: 300, transform: `rotateY(${showCard ? '0' : '180'}deg)` }}
+          onError={(e) => { e.target.onerror = null; e.target.src = process.env.PUBLIC_URL + '/placeholderImage.png'}}  
+        />
+            {/* rest of your card component */}
         </div>
     );
 }

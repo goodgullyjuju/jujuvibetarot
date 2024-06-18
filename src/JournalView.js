@@ -3,7 +3,7 @@ import TarotButton from './TarotButton'; // Import TarotButton
 import './JournalView.css'; // Import the CSS file
 
 function JournalView({ goBack }) {
-  const [journalEntries, setJournalEntries] = useState([]);
+  const [journalEntries, setJournalEntries] = useState(null); // Initially set to null
 
   useEffect(() => {
     const entries = JSON.parse(localStorage.getItem('journalEntries')) || [];
