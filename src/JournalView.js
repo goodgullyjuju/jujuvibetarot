@@ -27,16 +27,51 @@ function JournalView({ goBack }) {
     localStorage.setItem('journalEntries', JSON.stringify(updatedEntries));
   };
 
+  const exportEntries = () => {
+    const dataStr = JSON.stringify(journalEntries);
+    const dataUri = 'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+
+    const exportFileDefaultName = 'journalEntries.json';
+
+    const linkElement = document.createElement('a');
+    linkElement.setAttribute('href', dataUri);
+    linkElement.setAttribute('download', exportFileDefaultName);
+    linkElement.click();
+  };
+
+  const importEntries = (event) => {
+    const fileReader = new FileReader();
+    fileReader.onload = (e) => {
+      const importedEntries = JSON.parse(e.target.result);
+      setJournalEntries(importedEntries);
+      localStorage.setItem('journalEntries', JSON.stringify(importedEntries));
+    };
+    fileReader.readAsText(event.target.files[0]);
+  };
+
   return (
     <div>
       <TarotButton title="Back" onClick={goBack} />
       <h2>Journal Entries</h2>
+      <div>
+        <TarotButton title="Export Entries" onClick={exportEntries} />
+        <input
+          type="file"
+          accept=".json"
+          onChange={importEntries}
+          style={{ display: 'none' }}
+          id="import-file"
+        />
+        <label htmlFor="import-file">
+          <TarotButton title="Import Entries" />
+        </label>
+      </div>
       {journalEntries.map((entry) => (
         <div key={entry.id} className="cardContainer"> {/* Apply the .cardContainer class */}
           <h3>{new Date(entry.date).toLocaleDateString()}</h3>
           {entry.drawnCards.map((card, index) => (
             <div key={index}>
-               <img src={`${process.env.PUBLIC_URL}/images/${card.imageName}.png`} alt={card.name} className="cardImage" />
+              <img src={`/images/${card.image}.png`} alt={card.name} className="cardImage" />
               <p>Position: {card.position}</p>
               <p>Card: {card.name}</p>
               <p>Interpretation: {card.interpretations}</p>
