@@ -55,12 +55,12 @@ function OneCardDealView({ goBack }) {
       {drawnCard && (
         <>
  <img
-                src={process.env.PUBLIC_URL + `/images/${card.imageName}.png`}
-                alt={card.name}
+                src={process.env.PUBLIC_URL + `/images/${drawnCard.imageName}.png`}
+                alt={drawnCard.name}
                 className="cardImage"
                 onError={(e) => { 
                   e.target.onerror = null; 
-                  e.target.src = process.env.PUBLIC_URL + '/placeholderImage.png'; // Access placeholder from public folder
+                  e.target.src = process.env.PUBLIC_URL + '/placeholderImage.png'; 
                 }}
               />
           <textarea
