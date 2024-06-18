@@ -68,20 +68,28 @@ function JournalView({ goBack }) {
       </div>
       {journalEntries.map((entry) => (
         <div key={entry.id} className="cardContainer">
-          {/* ... (your other entry details) */}
+          <h3>{new Date(entry.date).toLocaleDateString()}</h3>
           {entry.drawnCards.map((card, index) => (
-             <div key={index}>
-             {console.log("Image Name:", card.imageName)} // Add this line for debugging
-             <img 
-                src={process.env.PUBLIC_URL + `/images/${card.imageName}.png`} 
+            <div key={index}>
+              {console.log("Image Name:", card.imageName)} {/* Debugging line */}
+              <img 
+                src={`/images/${card.imageName}.png`} 
                 alt={card.name} 
                 className="cardImage"
-                onError={(e) => { e.target.onerror = null; e.target.src = 'placeholderImage.png'}}  // This line adds a fallback image if the card image fails to load
+                onError={(e) => { e.target.onerror = null; e.target.src = '/placeholderImage.png'; }} 
               />
-              {/* ... (rest of your card details) */}
+              <p>Position: {card.position}</p>
+              <p>Card: {card.name}</p>
+              <p>Interpretation: {card.interpretations}</p>
             </div>
           ))}
-          {/* ... (rest of your entry details) */}
+          <textarea
+            placeholder="Comments"
+            value={entry.comments || ""}
+            onChange={(e) => updateComment(entry.id, e.target.value)}
+            onBlur={() => localStorage.setItem('journalEntries', JSON.stringify(journalEntries))}
+          />
+          <button onClick={() => deleteEntry(entry.id)}>Delete Entry</button>
         </div>
       ))}
     </div>
