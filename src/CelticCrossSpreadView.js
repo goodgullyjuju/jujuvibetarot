@@ -64,9 +64,9 @@ function CelticCrossSpreadView({ goBack }) {
                                 src={process.env.PUBLIC_URL + `/images/${card.imageName}.png`}
                                 alt={card.name}
                                 className="cardImage"
-                                onError={(e) => { 
-                                    e.target.onerror = null; 
-                                    e.target.src = process.env.PUBLIC_URL + '/placeholderImage.png'; 
+                                onError={(e) => {
+                                    e.target.onerror = null;
+                                    e.target.src = process.env.PUBLIC_URL + '/placeholderImage.png';
                                 }}
                             />
                         </div>
