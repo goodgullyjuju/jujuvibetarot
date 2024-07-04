@@ -54,6 +54,7 @@ function OneCardDealView({ goBack }) {
       <TarotButton title="Back" onClick={goBack} />
       {drawnCard && (
         <>
+          <h2 className="cardName">{drawnCard.name}</h2> {/* Display card name */}
           <img
             src={process.env.PUBLIC_URL + `/images/${drawnCard.imageName}.png`}
             alt={drawnCard.name}
@@ -63,7 +64,6 @@ function OneCardDealView({ goBack }) {
               e.target.src = process.env.PUBLIC_URL + '/placeholderImage.png'; 
             }}
           />
-          <h2 className="cardName">{drawnCard.name}</h2> {/* Display card name */}
           <div className="interpretation">
             <Scrollbar style={{ height: 200 }}>
               <div>{drawnCard.interpretations}</div>
