@@ -17,5 +17,11 @@
     border-radius: 5px;
     max-height: 200px; /* Ensures it does not overflow too much */
     overflow-y: auto; /* Adds scroll if content overflows */
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-top: 10px;
   }
   
