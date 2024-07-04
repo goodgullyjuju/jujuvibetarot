@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import TarotButton from './TarotButton';
+import { Scrollbar } from 'react-scrollbars-custom';
 import { saveJournalEntry } from './journalUtils.js'; // Ensure this path is correct
+import './CelticCrossSpreadView.css';
 
 function CelticCrossSpreadView({ goBack }) {
     const [cards, setCards] = useState([]);
@@ -58,8 +60,8 @@ function CelticCrossSpreadView({ goBack }) {
             {showSpread ? (
                 <>
                     {drawnCards.map((card, index) => (
-                        <div key={index}>
-                            <h3>{celticCrossPositions[index]}</h3> {/* Display the position label */}
+                        <div key={index} className="cardContainer">
+                            <h3 className="cardPosition">{celticCrossPositions[index]}</h3> {/* Display the position label */}
                             <img
                                 src={process.env.PUBLIC_URL + `/images/${card.imageName}.png`}
                                 alt={card.name}
@@ -69,6 +71,12 @@ function CelticCrossSpreadView({ goBack }) {
                                     e.target.src = process.env.PUBLIC_URL + '/placeholderImage.png';
                                 }}
                             />
+                            <h2 className="cardName">{card.name}</h2>
+                            <div className="interpretation">
+                                <Scrollbar style={{ height: 200 }}>
+                                    <div>{card.interpretations}</div>
+                                </Scrollbar>
+                            </div>
                         </div>
                     ))}
                     <textarea
