@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import TarotButton from './TarotButton';
+import { Scrollbar } from 'react-scrollbars-custom'; // Correct import
 import { saveJournalEntry } from './journalUtils.js'; // Adjust the path as needed
+import './ThreeCardDealView.css';
 
 function ThreeCardDealView({ goBack }) {
     const [cards, setCards] = useState([]);
@@ -42,12 +44,12 @@ function ThreeCardDealView({ goBack }) {
             const newEntry = {
                 id: new Date().getTime(),
                 date: new Date().toISOString(),
-                drawnCards: drawnCards.map(card => ({
+                drawnCards: drawnCards.map((card, index) => ({
                     id: card.id,
                     name: card.name,
                     imageName: card.imageName,
                     interpretations: card.interpretations,
-                    position: card.position, // Ensure this is set for CelticCrossSpreadView
+                    position: selectedSpread.split(", ")[index], // Assigning position based on the spread
                 })),
                 spreadType: selectedSpread,
                 comments: comments,
@@ -71,8 +73,8 @@ function ThreeCardDealView({ goBack }) {
             {selectedSpread && (
                 <>
                     {drawnCards.map((card, index) => (
-                        <div key={index}>
-                            <h3>{selectedSpread.split(", ")[index]}</h3>
+                        <div key={index} className="cardContainer">
+                            <h3 className="cardPosition">{selectedSpread.split(", ")[index]}</h3>
                             <img
                                 src={process.env.PUBLIC_URL + `/images/${card.imageName}.png`}
                                 alt={card.name}
@@ -82,6 +84,12 @@ function ThreeCardDealView({ goBack }) {
                                     e.target.src = process.env.PUBLIC_URL + '/placeholderImage.png'; 
                                 }}
                             />
+                            <h2 className="cardName">{card.name}</h2>
+                            <div className="interpretation">
+                                <Scrollbar style={{ height: 200 }}>
+                                    <div>{card.interpretations}</div>
+                                </Scrollbar>
+                            </div>
                         </div>
                     ))}
                     <textarea
