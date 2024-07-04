@@ -63,7 +63,7 @@ function OneCardDealView({ goBack }) {
               e.target.src = process.env.PUBLIC_URL + '/placeholderImage.png'; 
             }}
           />
-          <h2>{drawnCard.name}</h2> {/* Display card name */}
+          <h2 className="cardName">{drawnCard.name}</h2> {/* Display card name */}
           <div className="interpretation">
             <Scrollbar style={{ height: 200 }}>
               <div>{drawnCard.interpretations}</div>
