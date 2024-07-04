@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import TarotButton from './TarotButton';
-import { ScrollView } from 'react-scrollbars-custom';
 import './OneCardDealView.css';
+import { Scrollbar } from 'react-scrollbars-custom'; // Correct import
 import { saveJournalEntry } from './journalUtils'; // Adjust this path if needed
 
 function OneCardDealView({ goBack }) {
@@ -64,9 +64,9 @@ function OneCardDealView({ goBack }) {
             }}
           />
           <div className="interpretation">
-            <ScrollView>
-              {drawnCard.interpretations}
-            </ScrollView>
+            <Scrollbar style={{ height: 200 }}>
+              <div>{drawnCard.interpretations}</div>
+            </Scrollbar>
           </div>
           <textarea
             placeholder="Add comments about your reading here..."
