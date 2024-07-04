@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import TarotButton from './TarotButton';
+import { ScrollView } from 'react-scrollbars-custom';
 import './OneCardDealView.css';
 import { saveJournalEntry } from './journalUtils'; // Adjust this path if needed
 
@@ -56,12 +57,17 @@ function OneCardDealView({ goBack }) {
           <img
             src={process.env.PUBLIC_URL + `/images/${drawnCard.imageName}.png`}
             alt={drawnCard.name}
-            className="cardImage"
+            className="cardImage card-animation"
             onError={(e) => { 
               e.target.onerror = null; 
               e.target.src = process.env.PUBLIC_URL + '/placeholderImage.png'; 
             }}
           />
+          <div className="interpretation">
+            <ScrollView>
+              {drawnCard.interpretations}
+            </ScrollView>
+          </div>
           <textarea
             placeholder="Add comments about your reading here..."
             value={comment}

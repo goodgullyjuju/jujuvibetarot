@@ -1,4 +1,21 @@
-/* In your CSS file */
-.card-animation {
+.cardImage {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 10px;
     transition: transform 0.5s ease;
-}
+  }
+  
+  .card-animation {
+    transition: transform 0.5s ease;
+  }
+  
+  .interpretation {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 200px; /* Ensures it does not overflow too much */
+    overflow-y: auto; /* Adds scroll if content overflows */
+  }
+  
